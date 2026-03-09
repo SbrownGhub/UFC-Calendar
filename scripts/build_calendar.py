@@ -12,6 +12,7 @@ from uuid import uuid5, NAMESPACE_URL
 import requests
 from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
+from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -118,10 +119,11 @@ def parse_date_time(date_str: str, time_str: str) -> datetime:
     if dt is None:
         raise ValueError(f"Could not parse date/time: {candidate}")
 
-    # ESPN schedule times are presented in page-local display format;
-    # to avoid bad timezone guesses, store as UTC only if explicit timezone missing.
+    # ESPN schedule times are listed in US Eastern time on the schedule page.
+    # If no timezone info is present, interpret them as America/New_York,
+    # then convert to UTC for storage and calendar output.
     if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=timezone.utc)
+        dt = dt.replace(tzinfo=ZoneInfo("America/New_York"))
 
     return dt.astimezone(timezone.utc)
 
