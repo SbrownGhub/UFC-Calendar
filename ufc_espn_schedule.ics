@@ -6,11 +6,13 @@ X-WR-CALDESC:Free UFC event calendar by Against The Fence
 X-WR-TIMEZONE:UTC
 BEGIN:VEVENT
 UID:fdd74bfb-7d05-500a-bebf-6c44abf46abf@againstthefence.com
-DTSTAMP:20260309T153054Z
+DTSTAMP:20260309T155800Z
 DTSTART:20260314T210000Z
-DTEND:20260315T020000Z
+DTEND:20260315T000000Z
 SUMMARY:UFC Fight Night: Emmett vs. Vallejos
 DESCRIPTION:Main event: UFC Fight Night: Emmett vs. Vallejos
+Main card start (local): 2026-03-14 17:00 (EDT)
+Prelims start (local): TBA
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -29,12 +31,14 @@ LOCATION:Meta APEX, Las Vegas, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:75d1347a-12b0-51a1-b6fc-0cc371fa4b0d@againstthefence.com
-DTSTAMP:20260309T153054Z
-DTSTART:20260321T170000Z
-DTEND:20260321T220000Z
+UID:44a84380-5e21-55cb-aac7-23f479b496b7@againstthefence.com
+DTSTAMP:20260309T155800Z
+DTSTART:20260321T210000Z
+DTEND:20260322T000000Z
 SUMMARY:UFC Fight Night: Evloev vs. Murphy
 DESCRIPTION:Main event: UFC Fight Night: Evloev vs. Murphy
+Main card start (local): 2026-03-21 17:00 (EDT)
+Prelims start (local): 2026-03-21 13:00 (EDT)
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -53,12 +57,14 @@ LOCATION:O2 Arena (ENG), London, England
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:395ac781-094b-5bfa-99e9-964fffb34f14@againstthefence.com
-DTSTAMP:20260309T153054Z
-DTSTART:20260328T210000Z
-DTEND:20260329T020000Z
+UID:be2a721d-8bc6-58ae-9d5d-3f3563cf4770@againstthefence.com
+DTSTAMP:20260309T155800Z
+DTSTART:20260328T200000Z
+DTEND:20260328T230000Z
 SUMMARY:UFC Fight Night: Adesanya vs. Pyfer
 DESCRIPTION:Main event: UFC Fight Night: Adesanya vs. Pyfer
+Main card start (local): 2026-03-28 16:00 (EDT)
+Prelims start (local): 2026-03-28 17:00 (EDT)
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -77,12 +83,14 @@ LOCATION:Climate Pledge Arena, Seattle, WA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:b3047d4e-1995-51f3-9dc0-f948b772a17d@againstthefence.com
-DTSTAMP:20260309T153054Z
-DTSTART:20260404T200000Z
-DTEND:20260405T010000Z
+UID:c9da0f86-4f1b-5020-9f30-52ac64ca59ca@againstthefence.com
+DTSTAMP:20260309T155800Z
+DTSTART:20260404T210000Z
+DTEND:20260405T000000Z
 SUMMARY:UFC Fight Night: Moicano vs. Duncan
 DESCRIPTION:Main event: UFC Fight Night: Moicano vs. Duncan
+Main card start (local): 2026-04-04 17:00 (EDT)
+Prelims start (local): 2026-04-04 16:00 (EDT)
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -101,12 +109,14 @@ LOCATION:Meta APEX, Las Vegas, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:fe5d3d83-3a94-578e-b0d2-f6cbd01d1153@againstthefence.com
-DTSTAMP:20260309T153054Z
-DTSTART:20260411T210000Z
+UID:26f4e22e-1032-5bf5-92b6-e91f97461acf@againstthefence.com
+DTSTAMP:20260309T155800Z
+DTSTART:20260411T230000Z
 DTEND:20260412T020000Z
 SUMMARY:UFC 327: Procházka vs. Ulberg
 DESCRIPTION:Main event: UFC 327: Procházka vs. Ulberg
+Main card start (local): 2026-04-11 19:00 (EDT)
+Prelims start (local): 2026-04-11 17:00 (EDT)
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -125,12 +135,14 @@ LOCATION:Kaseya Center, Miami, FL
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:097a767c-a7fd-5a73-8e01-97d28497524c@againstthefence.com
-DTSTAMP:20260309T153054Z
-DTSTART:20260418T230000Z
-DTEND:20260419T040000Z
+UID:1ca7a1ad-66ac-5b2a-9738-f162d6b0a02b@againstthefence.com
+DTSTAMP:20260309T155800Z
+DTSTART:20260418T210000Z
+DTEND:20260419T000000Z
 SUMMARY:UFC Fight Night: Burns vs. Malott
 DESCRIPTION:Main event: UFC Fight Night: Burns vs. Malott
+Main card start (local): 2026-04-18 17:00 (EDT)
+Prelims start (local): 2026-04-18 19:00 (EDT)
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -149,12 +161,14 @@ LOCATION:Canada Life Centre, Winnipeg, MB, Canada
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:8ac3ec9d-ff2b-5d35-b4b8-7ecedf16078c@againstthefence.com
-DTSTAMP:20260309T153054Z
-DTSTART:20260425T210000Z
-DTEND:20260426T020000Z
+UID:96b42c9d-dc65-5e75-8d1c-19869b599784@againstthefence.com
+DTSTAMP:20260309T155800Z
+DTSTART:20260425T080000Z
+DTEND:20260425T110000Z
 SUMMARY:UFC Fight Night: Brady vs. Buckley
 DESCRIPTION:Main event: UFC Fight Night: Brady vs. Buckley
+Main card start (local): 2026-04-25 04:00 (EDT)
+Prelims start (local): 2026-04-25 17:00 (EDT)
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -173,12 +187,14 @@ LOCATION:Meta APEX, Las Vegas, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:fc1b5b83-b483-5ed6-a998-a9179cf47319@againstthefence.com
-DTSTAMP:20260309T153054Z
-DTSTART:20260502T080000Z
-DTEND:20260502T130000Z
+UID:7ff4b15b-3dbc-507b-8b31-8add4689f21e@againstthefence.com
+DTSTAMP:20260309T155800Z
+DTSTART:20260502T200000Z
+DTEND:20260502T230000Z
 SUMMARY:UFC Fight Night: Della Maddalena vs. Prates
 DESCRIPTION:Main event: UFC Fight Night: Della Maddalena vs. Prates
+Main card start (local): 2026-05-02 16:00 (EDT)
+Prelims start (local): 2026-05-02 04:00 (EDT)
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -197,12 +213,14 @@ LOCATION:RAC Arena (AUS), Perth, WA, Australia
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:325850a7-7a99-5767-b88a-2028bf05c3c6@againstthefence.com
-DTSTAMP:20260309T153054Z
-DTSTART:20260530T200000Z
-DTEND:20260531T010000Z
+UID:a5e9b599-4db5-584e-b70c-0a33207d7262@againstthefence.com
+DTSTAMP:20260309T155800Z
+DTSTART:20260531T000000Z
+DTEND:20260531T030000Z
 SUMMARY:UFC Fight Night: 5/30
 DESCRIPTION:Main event: UFC Fight Night: 5/30
+Main card start (local): 2026-05-30 20:00 (EDT)
+Prelims start (local): 2026-05-30 16:00 (EDT)
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.
@@ -222,11 +240,13 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:beb1fa47-5671-5bce-9e12-dc02d03aab20@againstthefence.com
-DTSTAMP:20260309T153054Z
+DTSTAMP:20260309T155800Z
 DTSTART:20260615T000000Z
-DTEND:20260615T050000Z
+DTEND:20260615T030000Z
 SUMMARY:UFC Freedom 250: Topuria vs. Gaethje
 DESCRIPTION:Main event: UFC Freedom 250: Topuria vs. Gaethje
+Main card start (local): 2026-06-14 20:00 (EDT)
+Prelims start (local): TBA
 
 Where to watch
 Broadcast availability varies by region. Check the official UFC watch page first.

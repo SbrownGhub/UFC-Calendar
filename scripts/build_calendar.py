@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from html import unescape
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 from uuid import uuid5, NAMESPACE_URL
 
 import requests
@@ -51,6 +51,7 @@ class FightEvent:
     location: str
     broadcaster: str
     source_url: str
+    prelims_utc: Optional[datetime] = None
 
     @property
     def uid(self) -> str:
@@ -62,8 +63,20 @@ class FightEvent:
         week_index = self.start_utc.isocalendar().week % len(ATF_BLURBS)
         atf_blurb = ATF_BLURBS[week_index]
 
+        # Show times exactly as on the ESPN schedule page,
+        # which is presented in US Eastern time.
+        tz = ZoneInfo("America/New_York")
+        main_local = self.start_utc.astimezone(tz).strftime("%Y-%m-%d %H:%M (%Z)")
+        if self.prelims_utc is not None:
+            prelim_local = self.prelims_utc.astimezone(tz).strftime("%Y-%m-%d %H:%M (%Z)")
+            prelim_line = f"Prelims start (local): {prelim_local}"
+        else:
+            prelim_line = "Prelims start (local): TBA"
+
         lines = [
             f"Main event: {self.title}",
+            f"Main card start (local): {main_local}",
+            prelim_line,
             "",
             *WATCH_LINES,
             f"Listed broadcaster: {self.broadcaster or 'TBC'}",
@@ -103,6 +116,118 @@ def extract_visible_lines(html: str) -> List[str]:
     return lines
 
 
+def guess_timezone_from_location(location: str) -> ZoneInfo:
+    """
+    Best-effort mapping from venue/location text to a timezone.
+    Prioritises US venues, with a sensible default for everything else.
+    """
+    loc = location.lower()
+
+    # West Coast / Pacific
+    if any(
+        token in loc
+        for token in [
+            "las vegas",
+            "nevada",
+            "nv",
+            "apex",
+            "t-mobile arena",
+            "anaheim",
+            "los angeles",
+            "inglewood",
+            "san diego",
+            "sacramento",
+            "san jose",
+            "california",
+            "ca",
+        ]
+    ):
+        return ZoneInfo("America/Los_Angeles")
+
+    # US Central
+    if any(
+        token in loc
+        for token in [
+            "chicago",
+            "illinois",
+            "il",
+            "houston",
+            "dallas",
+            "san antonio",
+            "texas",
+            "tx",
+            "kansas city",
+            "missouri",
+            "mo",
+            "minneapolis",
+            "minnesota",
+            "mn",
+            "milwaukee",
+            "wisconsin",
+            "wi",
+        ]
+    ):
+        return ZoneInfo("America/Chicago")
+
+    # US Mountain
+    if any(
+        token in loc
+        for token in [
+            "denver",
+            "colorado",
+            "co",
+            "salt lake city",
+            "utah",
+            "ut",
+        ]
+    ):
+        return ZoneInfo("America/Denver")
+
+    # US Eastern (explicit)
+    if any(
+        token in loc
+        for token in [
+            "new york",
+            "ny",
+            "boston",
+            "massachusetts",
+            "ma",
+            "miami",
+            "florida",
+            "fl",
+            "atlantic city",
+            "newark",
+            "new jersey",
+            "nj",
+            "orlando",
+            "philadelphia",
+            "pennsylvania",
+            "pa",
+            "charlotte",
+            "north carolina",
+            "nc",
+            "washington, dc",
+            "washington dc",
+        ]
+    ):
+        return ZoneInfo("America/New_York")
+
+    # A few common non-US venues (for better accuracy)
+    if "abu dhabi" in loc or "united arab emirates" in loc or "yas island" in loc:
+        return ZoneInfo("Asia/Dubai")
+    if "london" in loc or "england" in loc or "o2 arena" in loc:
+        return ZoneInfo("Europe/London")
+    if "paris" in loc or "france" in loc:
+        return ZoneInfo("Europe/Paris")
+    if "rio de janeiro" in loc or "brazil" in loc:
+        return ZoneInfo("America/Sao_Paulo")
+    if "perth" in loc or "australia" in loc or "sydney" in loc or "melbourne" in loc:
+        return ZoneInfo("Australia/Sydney")
+
+    # Sensible global default: ESPN schedule is US-facing, so Eastern.
+    return ZoneInfo("America/New_York")
+
+
 def parse_date_time(date_str: str, time_str: str) -> datetime:
     """
     ESPN schedule shows month/day plus time like:
@@ -119,9 +244,9 @@ def parse_date_time(date_str: str, time_str: str) -> datetime:
     if dt is None:
         raise ValueError(f"Could not parse date/time: {candidate}")
 
-    # ESPN schedule times are listed in US Eastern time on the schedule page.
-    # If no timezone info is present, interpret them as America/New_York,
-    # then convert to UTC for storage and calendar output.
+    # ESPN schedule shows times in US Eastern on the page.
+    # Treat the scraped time as America/New_York, then convert to UTC
+    # so that each subscriber's calendar can render in their own local time.
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=ZoneInfo("America/New_York"))
 
@@ -185,17 +310,21 @@ def parse_espn_schedule_lines(lines: List[str]) -> List[FightEvent]:
         if looks_like_date(line):
             date_str = line
 
-            # find next time, broadcaster, title, location in a short window
+            # find next times, broadcaster, title, location in a short window
             window = lines[i + 1:i + 8]
 
-            time_str = ""
+            time_main_str = ""
+            time_prelims_str = ""
             broadcaster = ""
             title = ""
             location = ""
 
             for item in window:
-                if not time_str and looks_like_time(item):
-                    time_str = item
+                if looks_like_time(item):
+                    if not time_prelims_str:
+                        time_prelims_str = item
+                    elif not time_main_str:
+                        time_main_str = item
                 elif not title and looks_like_event_title(item):
                     title = item
                 elif not location and looks_like_location(item):
@@ -203,9 +332,16 @@ def parse_espn_schedule_lines(lines: List[str]) -> List[FightEvent]:
                 elif item in {"Paramount+", "ESPN+", "ESPN", "TNT Sports", "discovery+", "TBA"}:
                     broadcaster = item
 
-            if title and time_str:
+            # If we only saw one time, treat it as the main card start and
+            # leave prelims unknown. If two times, first is prelims, second main.
+            if title and (time_main_str or time_prelims_str):
                 try:
-                    start_utc = parse_date_time(date_str, time_str)
+                    main_time_str = time_main_str or time_prelims_str
+                    start_utc = parse_date_time(date_str, main_time_str)
+
+                    prelims_utc: Optional[datetime] = None
+                    if time_main_str and time_prelims_str:
+                        prelims_utc = parse_date_time(date_str, time_prelims_str)
                 except Exception:
                     i += 1
                     continue
@@ -220,6 +356,7 @@ def parse_espn_schedule_lines(lines: List[str]) -> List[FightEvent]:
                         location=location,
                         broadcaster=broadcaster or "TBC",
                         source_url=ESPN_UFC_SCHEDULE_URL,
+                        prelims_utc=prelims_utc,
                     )
                 )
 
@@ -256,7 +393,7 @@ def build_calendar(events: List[FightEvent]) -> str:
     for item in events:
         dtstamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
         dtstart = item.start_utc.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        dtend = (item.start_utc + timedelta(hours=5)).astimezone(timezone.utc).strftime(
+        dtend = (item.start_utc + timedelta(hours=3)).astimezone(timezone.utc).strftime(
             "%Y%m%dT%H%M%SZ"
         )
 
