@@ -5,10 +5,10 @@ X-WR-CALNAME:UFC Event Schedule
 X-WR-CALDESC:Free UFC event calendar by Against The Fence
 X-WR-TIMEZONE:UTC
 BEGIN:VEVENT
-UID:5c9c07b2-b49d-5d1a-8897-c6fc59194e80@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260314T170000Z
-DTEND:20260314T220000Z
+UID:fdd74bfb-7d05-500a-bebf-6c44abf46abf@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260314T210000Z
+DTEND:20260315T020000Z
 SUMMARY:UFC Fight Night: Emmett vs. Vallejos
 DESCRIPTION:Main event: UFC Fight Night: Emmett vs. Vallejos
 
@@ -29,10 +29,10 @@ LOCATION:Meta APEX, Las Vegas, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:ce905d36-2589-543d-b427-8a13799f5b02@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260321T130000Z
-DTEND:20260321T180000Z
+UID:75d1347a-12b0-51a1-b6fc-0cc371fa4b0d@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260321T170000Z
+DTEND:20260321T220000Z
 SUMMARY:UFC Fight Night: Evloev vs. Murphy
 DESCRIPTION:Main event: UFC Fight Night: Evloev vs. Murphy
 
@@ -53,10 +53,10 @@ LOCATION:O2 Arena (ENG), London, England
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:43ffc37e-cbf9-558d-a5ee-fc41aebd25f1@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260328T170000Z
-DTEND:20260328T220000Z
+UID:395ac781-094b-5bfa-99e9-964fffb34f14@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260328T210000Z
+DTEND:20260329T020000Z
 SUMMARY:UFC Fight Night: Adesanya vs. Pyfer
 DESCRIPTION:Main event: UFC Fight Night: Adesanya vs. Pyfer
 
@@ -77,10 +77,10 @@ LOCATION:Climate Pledge Arena, Seattle, WA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:4cf2cbbf-a70a-5f6d-b342-736ba33dcf2b@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260404T160000Z
-DTEND:20260404T210000Z
+UID:b3047d4e-1995-51f3-9dc0-f948b772a17d@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260404T200000Z
+DTEND:20260405T010000Z
 SUMMARY:UFC Fight Night: Moicano vs. Duncan
 DESCRIPTION:Main event: UFC Fight Night: Moicano vs. Duncan
 
@@ -101,10 +101,10 @@ LOCATION:Meta APEX, Las Vegas, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:6ea13dde-3991-5830-993d-454196556db2@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260411T170000Z
-DTEND:20260411T220000Z
+UID:fe5d3d83-3a94-578e-b0d2-f6cbd01d1153@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260411T210000Z
+DTEND:20260412T020000Z
 SUMMARY:UFC 327: Procházka vs. Ulberg
 DESCRIPTION:Main event: UFC 327: Procházka vs. Ulberg
 
@@ -125,10 +125,10 @@ LOCATION:Kaseya Center, Miami, FL
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:6f04e6d0-3875-55dc-ab23-e79809d28692@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260418T190000Z
-DTEND:20260419T000000Z
+UID:097a767c-a7fd-5a73-8e01-97d28497524c@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260418T230000Z
+DTEND:20260419T040000Z
 SUMMARY:UFC Fight Night: Burns vs. Malott
 DESCRIPTION:Main event: UFC Fight Night: Burns vs. Malott
 
@@ -149,10 +149,10 @@ LOCATION:Canada Life Centre, Winnipeg, MB, Canada
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:4c3ec572-54cd-5b37-b5ea-116c5e399baa@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260425T170000Z
-DTEND:20260425T220000Z
+UID:8ac3ec9d-ff2b-5d35-b4b8-7ecedf16078c@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260425T210000Z
+DTEND:20260426T020000Z
 SUMMARY:UFC Fight Night: Brady vs. Buckley
 DESCRIPTION:Main event: UFC Fight Night: Brady vs. Buckley
 
@@ -173,10 +173,10 @@ LOCATION:Meta APEX, Las Vegas, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:a4371755-b52b-54d1-a642-96f22cef16a2@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260502T040000Z
-DTEND:20260502T090000Z
+UID:fc1b5b83-b483-5ed6-a998-a9179cf47319@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260502T080000Z
+DTEND:20260502T130000Z
 SUMMARY:UFC Fight Night: Della Maddalena vs. Prates
 DESCRIPTION:Main event: UFC Fight Night: Della Maddalena vs. Prates
 
@@ -197,10 +197,10 @@ LOCATION:RAC Arena (AUS), Perth, WA, Australia
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:a6facc51-30e0-5fc6-973d-1bdb79d47e89@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260530T160000Z
-DTEND:20260530T210000Z
+UID:325850a7-7a99-5767-b88a-2028bf05c3c6@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260530T200000Z
+DTEND:20260531T010000Z
 SUMMARY:UFC Fight Night: 5/30
 DESCRIPTION:Main event: UFC Fight Night: 5/30
 
@@ -221,10 +221,10 @@ LOCATION:Galaxy Arena, Cotai, Macau
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:fc2673ee-7fcc-5f5d-a65c-251a97ccb855@againstthefence.com
-DTSTAMP:20260309T150854Z
-DTSTART:20260614T200000Z
-DTEND:20260615T010000Z
+UID:beb1fa47-5671-5bce-9e12-dc02d03aab20@againstthefence.com
+DTSTAMP:20260309T153054Z
+DTSTART:20260615T000000Z
+DTEND:20260615T050000Z
 SUMMARY:UFC Freedom 250: Topuria vs. Gaethje
 DESCRIPTION:Main event: UFC Freedom 250: Topuria vs. Gaethje
 
@@ -237,7 +237,7 @@ TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
 ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
 Listed broadcaster: Paramount+
 
-ATF angle: If the judges ruin your night, ATF will be there to say it plainly.
+ATF angle: Skip the corporate waffle. Watch the fights, then come argue with us live.
 
 Venue: South Lawn of the White House, Washington, DC
 Source: https://www.espn.com/mma/schedule/_/league/ufc
