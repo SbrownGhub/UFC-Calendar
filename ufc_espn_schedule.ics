@@ -1,158 +1,247 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:ics.py - http://git.io/lLljaA
+PRODID:-//Against The Fence//ATF UFC Main Events//EN
+X-WR-CALNAME:UFC Event Schedule
+X-WR-CALDESC:Free UFC event calendar by Against The Fence
+X-WR-TIMEZONE:UTC
 BEGIN:VEVENT
-DESCRIPTION:Rogers Arena\, Vancouver\, BC\, Canada
-DURATION:PT5H
-DTSTART:20251018T210000Z
-SUMMARY:UFC Fight Night: Vancouver
-UID:2efc8f07-9678-467f-aab5-43627cd1de0c@2efc.org
+UID:5c9c07b2-b49d-5d1a-8897-c6fc59194e80@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260314T170000Z
+DTEND:20260314T220000Z
+SUMMARY:UFC Fight Night: Emmett vs. Vallejos
+DESCRIPTION:Main event: UFC Fight Night: Emmett vs. Vallejos
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: The card starts in the cage, but the real chaos starts in the comments.
+
+Venue: Meta APEX, Las Vegas, NV
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:Meta APEX, Las Vegas, NV
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Bojangles Coliseum\, Charlotte\, NC
-DURATION:PT5H
-DTSTART:20250815T233000Z
-SUMMARY:2025 PFL World Championships: Lightweights\, Bantamweights & Women's Flyweights
-UID:20a16b9d-9fa1-47e7-b1d3-6fcfdd2739d1@20a1.org
+UID:ce905d36-2589-543d-b427-8a13799f5b02@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260321T130000Z
+DTEND:20260321T180000Z
+SUMMARY:UFC Fight Night: Evloev vs. Murphy
+DESCRIPTION:Main event: UFC Fight Night: Evloev vs. Murphy
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: Watch the event, and head to ATF for the fan verdict they won't give you on broadcast.
+
+Venue: O2 Arena (ENG), London, England
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:O2 Arena (ENG), London, England
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:RAC Arena (AUS)\, Perth\, WA\, Australia
-DURATION:PT5H
-DTSTART:20250928T000000Z
-SUMMARY:UFC Fight Night: Ulberg vs. Reyes
-UID:d0668f83-38fb-4592-bf51-bc1ef35dc0eb@d066.org
+UID:43ffc37e-cbf9-558d-a5ee-fc41aebd25f1@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260328T170000Z
+DTEND:20260328T220000Z
+SUMMARY:UFC Fight Night: Adesanya vs. Pyfer
+DESCRIPTION:Main event: UFC Fight Night: Adesanya vs. Pyfer
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: We do not do polite, sterile analysis. We do fan energy, sharp takes, and proper watch-alongs.
+
+Venue: Climate Pledge Arena, Seattle, WA
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:Climate Pledge Arena, Seattle, WA
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20250924T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 7
-UID:868cd703-0352-4529-b43b-48e2f3008aaa@868c.org
+UID:4cf2cbbf-a70a-5f6d-b342-736ba33dcf2b@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260404T160000Z
+DTEND:20260404T210000Z
+SUMMARY:UFC Fight Night: Moicano vs. Duncan
+DESCRIPTION:Main event: UFC Fight Night: Moicano vs. Duncan
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: If the judges ruin your night, ATF will be there to say it plainly.
+
+Venue: Meta APEX, Las Vegas, NV
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:Meta APEX, Las Vegas, NV
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:United Center\, Chicago\, IL
-DURATION:PT5H
-DTSTART:20250816T230000Z
-SUMMARY:UFC 319: Du Plessis vs. Chimaev
-UID:b03d301b-ee7c-4fc1-a8bd-e703806b554f@b03d.org
+UID:6ea13dde-3991-5830-993d-454196556db2@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260411T170000Z
+DTEND:20260411T220000Z
+SUMMARY:UFC 327: Procházka vs. Ulberg
+DESCRIPTION:Main event: UFC 327: Procházka vs. Ulberg
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: Skip the corporate waffle. Watch the fights, then come argue with us live.
+
+Venue: Kaseya Center, Miami, FL
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:Kaseya Center, Miami, FL
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Farmasi Arena\, Rio De Janeiro\, Brazil
-DURATION:PT5H
-DTSTART:20251011T210000Z
-SUMMARY:UFC Fight Night: Oliveira vs. Fiziev
-UID:30567d05-ad95-4f34-b3cf-9e96ae290a72@3056.org
+UID:6f04e6d0-3875-55dc-ab23-e79809d28692@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260418T190000Z
+DTEND:20260419T000000Z
+SUMMARY:UFC Fight Night: Burns vs. Malott
+DESCRIPTION:Main event: UFC Fight Night: Burns vs. Malott
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: The card starts in the cage, but the real chaos starts in the comments.
+
+Venue: Canada Life Centre, Winnipeg, MB, Canada
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:Canada Life Centre, Winnipeg, MB, Canada
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Mercedes-Benz Arena\, Shanghai\, China
-DURATION:PT5H
-DTSTART:20250823T080000Z
-SUMMARY:UFC Fight Night: Walker vs. Zhang
-UID:ebf29433-6b28-4072-8ff3-104c76fd7a92@ebf2.org
+UID:4c3ec572-54cd-5b37-b5ea-116c5e399baa@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260425T170000Z
+DTEND:20260425T220000Z
+SUMMARY:UFC Fight Night: Brady vs. Buckley
+DESCRIPTION:Main event: UFC Fight Night: Brady vs. Buckley
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: Watch the event, and head to ATF for the fan verdict they won't give you on broadcast.
+
+Venue: Meta APEX, Las Vegas, NV
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:Meta APEX, Las Vegas, NV
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20251015T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 10
-UID:ec02a1f0-17b4-44b6-9522-ca9869aea248@ec02.org
+UID:a4371755-b52b-54d1-a642-96f22cef16a2@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260502T040000Z
+DTEND:20260502T090000Z
+SUMMARY:UFC Fight Night: Della Maddalena vs. Prates
+DESCRIPTION:Main event: UFC Fight Night: Della Maddalena vs. Prates
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: We do not do polite, sterile analysis. We do fan energy, sharp takes, and proper watch-alongs.
+
+Venue: RAC Arena (AUS), Perth, WA, Australia
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:RAC Arena (AUS), Perth, WA, Australia
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20250903T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 4
-UID:81abaf33-9b61-45c9-a13e-eb10a0a68b60@81ab.org
+UID:a6facc51-30e0-5fc6-973d-1bdb79d47e89@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260530T160000Z
+DTEND:20260530T210000Z
+SUMMARY:UFC Fight Night: 5/30
+DESCRIPTION:Main event: UFC Fight Night: 5/30
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: Watch the event, and head to ATF for the fan verdict they won't give you on broadcast.
+
+Venue: Galaxy Arena, Cotai, Macau
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:Galaxy Arena, Cotai, Macau
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20251008T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 9
-UID:f49fb415-d135-42db-a75b-f1161c8c7d47@f49f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:T-Mobile Arena\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20251004T230000Z
-SUMMARY:UFC 320: Ankalaev vs. Pereira 2
-UID:b7bc545a-7544-4b70-b7e7-67789376746e@b7bc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Accor Arena\, Paris\, France
-DURATION:PT5H
-DTSTART:20250906T170000Z
-SUMMARY:UFC Fight Night: Imavov vs. Borralho
-UID:022970f1-1130-4ca4-9c46-2bf7d0205ddc@0229.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Frost Bank Center\, San Antonio\, TX
-DURATION:PT5H
-DTSTART:20250913T200000Z
-SUMMARY:Noche UFC: Lopes vs. Silva
-UID:ac9a9a72-32d6-439e-a4fe-de0aa96a03de@ac9a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20250813T000000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 1
-UID:e1d2d91d-520c-4950-92d9-bb31f4a12c31@e1d2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20250910T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 5
-UID:65d0433e-2ab5-4d14-8cec-f68919afafe3@65d0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20250820T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 2
-UID:76d1fa00-56bb-461e-a222-7b25fb13865a@76d1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Etihad Arena\, Abu Dhabi\, United Arab Emirates
-DURATION:PT5H
-DTSTART:20251025T150000Z
-SUMMARY:UFC 321: Aspinall vs. Gane
-UID:6f599656-5158-4749-b60d-229cef316a24@6f59.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Seminole Hard Rock Hotel and Casino\, Hollywood\, FL
-DURATION:PT5H
-DTSTART:20250821T230000Z
-SUMMARY:2025 PFL World Championships: Middleweights\, Light Heavyweights\, Heavyweights
-UID:666c353d-1362-4fbc-ba9f-3b3d967fdb28@666c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:ABHA Arena\, Doha\, Qatar
-DURATION:PT5H
-DTSTART:20251122T150000Z
-SUMMARY:UFC Fight Night: Qatar
-UID:5b1f7f30-a8ef-4922-8838-f7a939b57ede@5b1f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20250917T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 6
-UID:b4266720-c7d9-46d3-98b8-313245e11790@b426.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20250827T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 3
-UID:e888eddc-65ec-45af-95b2-ff83cba97384@e888.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:UFC APEX\, Las Vegas\, NV
-DURATION:PT5H
-DTSTART:20251001T010000Z
-SUMMARY:Dana White's Contender Series: Season 9\, Week 8
-UID:79d9d191-a85f-4f23-a8da-aeed6a6017a2@79d9.org
+UID:fc2673ee-7fcc-5f5d-a65c-251a97ccb855@againstthefence.com
+DTSTAMP:20260309T150854Z
+DTSTART:20260614T200000Z
+DTEND:20260615T010000Z
+SUMMARY:UFC Freedom 250: Topuria vs. Gaethje
+DESCRIPTION:Main event: UFC Freedom 250: Topuria vs. Gaethje
+
+Where to watch
+Broadcast availability varies by region. Check the official UFC watch page first.
+Official UFC: https://www.ufc.com/watch
+Paramount+: https://www.paramountplus.com/shows/ufc/
+TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
+TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
+ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
+Listed broadcaster: Paramount+
+
+ATF angle: If the judges ruin your night, ATF will be there to say it plainly.
+
+Venue: South Lawn of the White House, Washington, DC
+Source: https://www.espn.com/mma/schedule/_/league/ufc
+LOCATION:South Lawn of the White House, Washington, DC
+URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 END:VCALENDAR
