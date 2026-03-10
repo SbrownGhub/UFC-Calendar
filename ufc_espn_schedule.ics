@@ -5,263 +5,103 @@ X-WR-CALNAME:UFC Event Schedule
 X-WR-CALDESC:Free UFC event calendar by Against The Fence
 X-WR-TIMEZONE:UTC
 BEGIN:VEVENT
-UID:fdd74bfb-7d05-500a-bebf-6c44abf46abf@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260314T210000Z
-DTEND:20260315T000000Z
+UID:d5dc1f93-5c08-5cca-9f84-1a2613dcebfb@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/Los_Angeles:20260314T170000
+DTEND;TZID=America/Los_Angeles:20260314T200000
 SUMMARY:UFC Fight Night: Emmett vs. Vallejos
-DESCRIPTION:Main event: UFC Fight Night: Emmett vs. Vallejos
-Main card start (local): 2026-03-14 17:00 (EDT)
-Prelims start (local): TBA
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: The card starts in the cage, but the real chaos starts in the comments.
-
-Venue: Meta APEX, Las Vegas, NV
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:Meta APEX, Las Vegas, NV
+DESCRIPTION:Where to watch\nUFC Fight Night: Emmett vs. Vallejos main card streams on Paramount+ at 8:00 PM\, PDT.\nThe prelims stream on Paramount+ at 5:00 PM\, PDT.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:Meta APEX\, Las Vegas\, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:44a84380-5e21-55cb-aac7-23f479b496b7@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260321T210000Z
-DTEND:20260322T000000Z
+UID:9a9c3368-3b6b-56e7-b735-9d49704b22a6@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=Europe/London:20260321T170000
+DTEND;TZID=Europe/London:20260321T200000
 SUMMARY:UFC Fight Night: Evloev vs. Murphy
-DESCRIPTION:Main event: UFC Fight Night: Evloev vs. Murphy
-Main card start (local): 2026-03-21 17:00 (EDT)
-Prelims start (local): 2026-03-21 13:00 (EDT)
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: Watch the event, and head to ATF for the fan verdict they won't give you on broadcast.
-
-Venue: O2 Arena (ENG), London, England
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:O2 Arena (ENG), London, England
+DESCRIPTION:Where to watch\nUFC Fight Night: Evloev vs. Murphy main card streams on Paramount+ at 5:00 PM\, GMT.\nThe prelims stream on Paramount+ at 1:00 PM\, GMT.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:O2 Arena (ENG)\, London\, England
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:be2a721d-8bc6-58ae-9d5d-3f3563cf4770@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260328T200000Z
-DTEND:20260328T230000Z
+UID:7eb295f2-0e72-5a03-aad3-0fcb14ed68a3@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/Los_Angeles:20260328T160000
+DTEND;TZID=America/Los_Angeles:20260328T190000
 SUMMARY:UFC Fight Night: Adesanya vs. Pyfer
-DESCRIPTION:Main event: UFC Fight Night: Adesanya vs. Pyfer
-Main card start (local): 2026-03-28 16:00 (EDT)
-Prelims start (local): 2026-03-28 17:00 (EDT)
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: We do not do polite, sterile analysis. We do fan energy, sharp takes, and proper watch-alongs.
-
-Venue: Climate Pledge Arena, Seattle, WA
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:Climate Pledge Arena, Seattle, WA
+DESCRIPTION:Where to watch\nUFC Fight Night: Adesanya vs. Pyfer main card streams on Paramount+ at 4:00 PM\, PDT.\nThe prelims stream on Paramount+ at 5:00 PM\, PDT.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:Climate Pledge Arena\, Seattle\, WA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:c9da0f86-4f1b-5020-9f30-52ac64ca59ca@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260404T210000Z
-DTEND:20260405T000000Z
+UID:b0c401af-0ee9-58e3-857a-bf0857f51946@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/Los_Angeles:20260404T170000
+DTEND;TZID=America/Los_Angeles:20260404T200000
 SUMMARY:UFC Fight Night: Moicano vs. Duncan
-DESCRIPTION:Main event: UFC Fight Night: Moicano vs. Duncan
-Main card start (local): 2026-04-04 17:00 (EDT)
-Prelims start (local): 2026-04-04 16:00 (EDT)
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: If the judges ruin your night, ATF will be there to say it plainly.
-
-Venue: Meta APEX, Las Vegas, NV
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:Meta APEX, Las Vegas, NV
+DESCRIPTION:Where to watch\nUFC Fight Night: Moicano vs. Duncan main card streams on Paramount+ at 5:00 PM\, PDT.\nThe prelims stream on Paramount+ at 4:00 PM\, PDT.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:Meta APEX\, Las Vegas\, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:26f4e22e-1032-5bf5-92b6-e91f97461acf@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260411T230000Z
-DTEND:20260412T020000Z
+UID:0856be92-934e-5ae0-b8f9-957a8256a90a@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/New_York:20260411T190000
+DTEND;TZID=America/New_York:20260411T220000
 SUMMARY:UFC 327: Procházka vs. Ulberg
-DESCRIPTION:Main event: UFC 327: Procházka vs. Ulberg
-Main card start (local): 2026-04-11 19:00 (EDT)
-Prelims start (local): 2026-04-11 17:00 (EDT)
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: Skip the corporate waffle. Watch the fights, then come argue with us live.
-
-Venue: Kaseya Center, Miami, FL
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:Kaseya Center, Miami, FL
+DESCRIPTION:Where to watch\nUFC 327: Procházka vs. Ulberg main card streams on Paramount+ at 7:00 PM\, EDT.\nThe prelims stream on Paramount+ at 5:00 PM\, EDT.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:Kaseya Center\, Miami\, FL
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:1ca7a1ad-66ac-5b2a-9738-f162d6b0a02b@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260418T210000Z
-DTEND:20260419T000000Z
+UID:ceb38f35-1d43-5e1d-be4a-aed8439245d2@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/Los_Angeles:20260418T170000
+DTEND;TZID=America/Los_Angeles:20260418T200000
 SUMMARY:UFC Fight Night: Burns vs. Malott
-DESCRIPTION:Main event: UFC Fight Night: Burns vs. Malott
-Main card start (local): 2026-04-18 17:00 (EDT)
-Prelims start (local): 2026-04-18 19:00 (EDT)
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: The card starts in the cage, but the real chaos starts in the comments.
-
-Venue: Canada Life Centre, Winnipeg, MB, Canada
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:Canada Life Centre, Winnipeg, MB, Canada
+DESCRIPTION:Where to watch\nUFC Fight Night: Burns vs. Malott main card streams on Paramount+ at 5:00 PM\, PDT.\nThe prelims stream on Paramount+ at 7:00 PM\, PDT.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:Canada Life Centre\, Winnipeg\, MB\, Canada
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:96b42c9d-dc65-5e75-8d1c-19869b599784@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260425T080000Z
-DTEND:20260425T110000Z
+UID:7898f7fb-37a1-5710-8dc1-c492fd147f32@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/Los_Angeles:20260425T040000
+DTEND;TZID=America/Los_Angeles:20260425T070000
 SUMMARY:UFC Fight Night: Brady vs. Buckley
-DESCRIPTION:Main event: UFC Fight Night: Brady vs. Buckley
-Main card start (local): 2026-04-25 04:00 (EDT)
-Prelims start (local): 2026-04-25 17:00 (EDT)
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: Watch the event, and head to ATF for the fan verdict they won't give you on broadcast.
-
-Venue: Meta APEX, Las Vegas, NV
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:Meta APEX, Las Vegas, NV
+DESCRIPTION:Where to watch\nUFC Fight Night: Brady vs. Buckley main card streams on Paramount+ at 4:00 AM\, PDT.\nThe prelims stream on Paramount+ at 5:00 PM\, PDT.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:Meta APEX\, Las Vegas\, NV
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:7ff4b15b-3dbc-507b-8b31-8add4689f21e@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260502T200000Z
-DTEND:20260502T230000Z
+UID:394e6679-0660-5128-bff8-2edd336cbb18@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/Los_Angeles:20260502T160000
+DTEND;TZID=America/Los_Angeles:20260502T190000
 SUMMARY:UFC Fight Night: Della Maddalena vs. Prates
-DESCRIPTION:Main event: UFC Fight Night: Della Maddalena vs. Prates
-Main card start (local): 2026-05-02 16:00 (EDT)
-Prelims start (local): 2026-05-02 04:00 (EDT)
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: We do not do polite, sterile analysis. We do fan energy, sharp takes, and proper watch-alongs.
-
-Venue: RAC Arena (AUS), Perth, WA, Australia
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:RAC Arena (AUS), Perth, WA, Australia
+DESCRIPTION:Where to watch\nUFC Fight Night: Della Maddalena vs. Prates main card streams on Paramount+ at 4:00 PM\, PDT.\nThe prelims stream on Paramount+ at 4:00 AM\, PDT.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:RAC Arena (AUS)\, Perth\, WA\, Australia
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:a5e9b599-4db5-584e-b70c-0a33207d7262@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260531T000000Z
-DTEND:20260531T030000Z
+UID:33721857-1cc5-5206-8f10-02189143fcb2@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/Los_Angeles:20260530T200000
+DTEND;TZID=America/Los_Angeles:20260530T230000
 SUMMARY:UFC Fight Night: 5/30
-DESCRIPTION:Main event: UFC Fight Night: 5/30
-Main card start (local): 2026-05-30 20:00 (EDT)
-Prelims start (local): 2026-05-30 16:00 (EDT)
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: Watch the event, and head to ATF for the fan verdict they won't give you on broadcast.
-
-Venue: Galaxy Arena, Cotai, Macau
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:Galaxy Arena, Cotai, Macau
+DESCRIPTION:Where to watch\nUFC Fight Night: 5/30 main card streams on Paramount+ at 8:00 PM\, PDT.\nThe prelims stream on Paramount+ at 4:00 PM\, PDT.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:Galaxy Arena\, Cotai\, Macau
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:beb1fa47-5671-5bce-9e12-dc02d03aab20@againstthefence.com
-DTSTAMP:20260309T161709Z
-DTSTART:20260615T000000Z
-DTEND:20260615T030000Z
+UID:4cba56ee-47fe-55f1-a281-552fd73eadb8@againstthefence.com
+DTSTAMP:20260310T044654Z
+DTSTART;TZID=America/Los_Angeles:20260614T200000
+DTEND;TZID=America/Los_Angeles:20260614T230000
 SUMMARY:UFC Freedom 250: Topuria vs. Gaethje
-DESCRIPTION:Main event: UFC Freedom 250: Topuria vs. Gaethje
-Main card start (local): 2026-06-14 20:00 (EDT)
-Prelims start (local): TBA
-
-Where to watch
-Broadcast availability varies by region. Check the official UFC watch page first.
-Official UFC: https://www.ufc.com/watch
-Paramount+: https://www.paramountplus.com/shows/ufc/
-TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/
-TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/
-ATF Watch Along (free): https://www.youtube.com/c/AgainstTheFence
-Listed broadcaster: Paramount+
-
-ATF angle: Skip the corporate waffle. Watch the fights, then come argue with us live.
-
-Venue: South Lawn of the White House, Washington, DC
-Source: https://www.espn.com/mma/schedule/_/league/ufc
-LOCATION:South Lawn of the White House, Washington, DC
+DESCRIPTION:Where to watch\nUFC Freedom 250: Topuria vs. Gaethje main card streams on Paramount+ at 11:00 PM\, PDT.\nThe prelims stream on Paramount+ at 8:00 PM\, PDT.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence https://www.youtube.com/c/AgainstTheFence\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 END:VCALENDAR

@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from html import unescape
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
+#
 from uuid import uuid5, NAMESPACE_URL
 
 import requests
@@ -19,200 +21,140 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_ICS = ROOT / "ufc_espn_schedule.ics"
 OUTPUT_JSON = ROOT / "events_cache.json"
 
+#
 ESPN_UFC_SCHEDULE_URL = "https://www.espn.com/mma/schedule/_/league/ufc"
 ATF_URL = "https://www.youtube.com/c/AgainstTheFence"
+
+ATF_BLURBS = [
+    "Skip the corporate waffle. Watch the fights, come argue with us live - ATF",
+    "The card starts in the cage, but the real chaos starts in the comments - ATF",
+    "Watch the event, and head to ATF for the fan verdict they won't give you on broadcast",
+    "We do not do polite, sterile analysis. We do fan energy, sharp takes, and proper watch-alongs - ATF",
+    "If the judges ruin your night, we will be there to say it plainly - ATF",
+]
 
 CALENDAR_NAME = "UFC Event Schedule"
 CALENDAR_DESC = "Free UFC event calendar by Against The Fence"
 
-WATCH_LINES = [
-    "Where to watch",
-    "Broadcast availability varies by region. Check the official UFC watch page first.",
-    "Official UFC: https://www.ufc.com/watch",
-    "Paramount+: https://www.paramountplus.com/shows/ufc/",
-    "TNT Sports UFC: https://www.tntsports.co.uk/mixed-martial-arts/ufc/",
-    "TNT Sports Box Office: https://www.tntsports.co.uk/boxoffice/",
-    f"ATF Watch Along (free): {ATF_URL}",
-]
+#
 
-ATF_BLURBS = [
-    "ATF angle: Skip the corporate waffle. Watch the fights, then come argue with us live.",
-    "ATF angle: The card starts in the cage, but the real chaos starts in the comments.",
-    "ATF angle: Watch the event, and head to ATF for the fan verdict they won't give you on broadcast.",
-    "ATF angle: We do not do polite, sterile analysis. We do fan energy, sharp takes, and proper watch-alongs.",
-    "ATF angle: If the judges ruin your night, ATF will be there to say it plainly.",
-]
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/122.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "en-GB,en;q=0.9",
+}
 
 
 @dataclass
 class FightEvent:
     title: str
-    start_utc: datetime
+    start_local: datetime
     location: str
     broadcaster: str
     source_url: str
-    prelims_utc: Optional[datetime] = None
+    prelims_local: Optional[datetime] = None
 
     @property
     def uid(self) -> str:
-        stable_key = f"{self.title}|{self.start_utc.isoformat()}|{self.location}"
+        stable_key = f"{normalise_title(self.title)}|{self.start_local.date().isoformat()}"
         return f"{uuid5(NAMESPACE_URL, stable_key)}@againstthefence.com"
 
     @property
     def description(self) -> str:
-        week_index = self.start_utc.isocalendar().week % len(ATF_BLURBS)
-        atf_blurb = ATF_BLURBS[week_index]
-
-        # Show times exactly as on the ESPN schedule page,
-        # which is presented in US Eastern time.
-        tz = ZoneInfo("America/New_York")
-        main_local = self.start_utc.astimezone(tz).strftime("%Y-%m-%d %H:%M (%Z)")
-        if self.prelims_utc is not None:
-            prelim_local = self.prelims_utc.astimezone(tz).strftime("%Y-%m-%d %H:%M (%Z)")
-            prelim_line = f"Prelims start (local): {prelim_local}"
-        else:
-            prelim_line = "Prelims start (local): TBA"
+        prelims_time, main_time, tz_label = format_event_local_times(
+            self.start_local,
+            self.location,
+            self.prelims_local,
+        )
+        blurb_index = self.start_local.isocalendar().week % len(ATF_BLURBS)
+        atf_blurb = ATF_BLURBS[blurb_index]
 
         lines = [
-            f"Main event: {self.title}",
-            f"Main card start (local): {main_local}",
-            prelim_line,
-            "",
-            *WATCH_LINES,
-            f"Listed broadcaster: {self.broadcaster or 'TBC'}",
+            "Where to watch",
+            f"{self.title} main card streams on Paramount+ at {main_time}, {tz_label}.",
+            f"The prelims stream on Paramount+ at {prelims_time}, {tz_label}.",
             "",
             atf_blurb,
             "",
-            f"Venue: {self.location}",
-            f"Source: {self.source_url}",
+        f"Watch along for free on Against The Fence {ATF_URL}",
+            "",
         ]
         return "\n".join(lines)
 
 
+def _should_disable_ssl_verification() -> bool:
+    """
+    Returns True if SSL certificate verification should be disabled.
+
+    Controlled via the UFC_CALENDAR_INSECURE environment variable:
+      - "1", "true", "yes", "on" (case-insensitive) => disable verification
+      - anything else (or unset) => keep verification enabled
+    """
+    value = os.getenv("UFC_CALENDAR_INSECURE", "").strip().lower()
+    return value in {"1", "true", "yes", "on"}
+
+
 def fetch_html(url: str) -> str:
-    headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; ATF-UFC-Calendar/1.0)"
-    }
-    response = requests.get(url, headers=headers, timeout=30)
-    response.raise_for_status()
-    return response.text
+    """
+    Fetch HTML with robust SSL handling.
+
+    By default this verifies SSL certificates. If an SSL error occurs,
+    it will log a warning and automatically retry once without
+    certificate verification. To force insecure mode from the start,
+    set UFC_CALENDAR_INSECURE=1 in the environment.
+    """
+    verify = not _should_disable_ssl_verification()
+
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=30, verify=verify)
+        response.raise_for_status()
+        return response.text
+    except requests.exceptions.SSLError as exc:
+        if not verify:
+            # Already in insecure mode; propagate the error.
+            raise
+
+        print(f"WARNING: SSL verification failed for {url}: {exc}")
+        print("Retrying once without certificate verification...")
+
+        response = requests.get(url, headers=HEADERS, timeout=30, verify=False)
+        response.raise_for_status()
+        return response.text
 
 
 def clean_text(text: str) -> str:
-    text = unescape(text)
-    text = re.sub(r"\s+", " ", text or "").strip()
+    text = unescape(text or "")
+    text = re.sub(r"\s+", " ", text).strip()
     return text
 
 
-def extract_visible_lines(html: str) -> List[str]:
-    soup = BeautifulSoup(html, "lxml")
-
-    for tag in soup(["script", "style", "noscript"]):
-        tag.decompose()
-
-    raw_text = soup.get_text("\n")
-    lines = [clean_text(line) for line in raw_text.splitlines()]
-    lines = [line for line in lines if line]
-    return lines
-
-
 def guess_timezone_from_location(location: str) -> ZoneInfo:
-    """
-    Best-effort mapping from venue/location text to a timezone.
-    Prioritises US venues, with a sensible default for everything else.
-    """
     loc = location.lower()
 
-    # West Coast / Pacific
-    if any(
-        token in loc
-        for token in [
-            "las vegas",
-            "nevada",
-            "nv",
-            "apex",
-            "t-mobile arena",
-            "anaheim",
-            "los angeles",
-            "inglewood",
-            "san diego",
-            "sacramento",
-            "san jose",
-            "california",
-            "ca",
-        ]
-    ):
+    if any(token in loc for token in ["las vegas", "nevada", "nv", "apex", "t-mobile arena", "california", "ca", "los angeles", "anaheim", "inglewood"]):
         return ZoneInfo("America/Los_Angeles")
 
-    # US Central
-    if any(
-        token in loc
-        for token in [
-            "chicago",
-            "illinois",
-            "il",
-            "houston",
-            "dallas",
-            "san antonio",
-            "texas",
-            "tx",
-            "kansas city",
-            "missouri",
-            "mo",
-            "minneapolis",
-            "minnesota",
-            "mn",
-            "milwaukee",
-            "wisconsin",
-            "wi",
-        ]
-    ):
+    if any(term in loc for term in ["seattle", "washington state", " wa ", ", wa"]):
+        return ZoneInfo("America/Los_Angeles")
+
+    if any(token in loc for token in ["chicago", "illinois", "il", "houston", "dallas", "san antonio", "texas", "tx", "kansas city", "minneapolis", "wisconsin", "milwaukee"]):
         return ZoneInfo("America/Chicago")
 
-    # US Mountain
-    if any(
-        token in loc
-        for token in [
-            "denver",
-            "colorado",
-            "co",
-            "salt lake city",
-            "utah",
-            "ut",
-        ]
-    ):
+    if any(term in loc for term in ["abu dhabi", "yas island", "united arab emirates", "uae"]):
+        return ZoneInfo("Asia/Dubai")
+
+    if any(term in loc for term in ["macau", "macao"]):
+        return ZoneInfo("Asia/Macau")
+
+    if any(token in loc for token in ["denver", "colorado", "co", "salt lake city", "utah", "ut"]):
         return ZoneInfo("America/Denver")
 
-    # US Eastern (explicit)
-    if any(
-        token in loc
-        for token in [
-            "new york",
-            "ny",
-            "boston",
-            "massachusetts",
-            "ma",
-            "miami",
-            "florida",
-            "fl",
-            "atlantic city",
-            "newark",
-            "new jersey",
-            "nj",
-            "orlando",
-            "philadelphia",
-            "pennsylvania",
-            "pa",
-            "charlotte",
-            "north carolina",
-            "nc",
-            "washington, dc",
-            "washington dc",
-        ]
-    ):
+    if any(token in loc for token in ["new york", "ny", "newark", "new jersey", "nj", "miami", "florida", "fl", "orlando", "philadelphia", "charlotte", "north carolina", "nc", "atlanta", "boston", "massachusetts", "ma", "washington dc"]):
         return ZoneInfo("America/New_York")
 
-    # A few common non-US venues (for better accuracy)
     if "abu dhabi" in loc or "united arab emirates" in loc or "yas island" in loc:
         return ZoneInfo("Asia/Dubai")
     if "london" in loc or "england" in loc or "o2 arena" in loc:
@@ -221,36 +163,35 @@ def guess_timezone_from_location(location: str) -> ZoneInfo:
         return ZoneInfo("Europe/Paris")
     if "rio de janeiro" in loc or "brazil" in loc:
         return ZoneInfo("America/Sao_Paulo")
-    if "perth" in loc or "australia" in loc or "sydney" in loc or "melbourne" in loc:
+    if "perth" in loc:
+        return ZoneInfo("Australia/Perth")
+    if "sydney" in loc or "melbourne" in loc or "australia" in loc:
         return ZoneInfo("Australia/Sydney")
 
-    # Sensible global default: ESPN schedule is US-facing, so Eastern.
     return ZoneInfo("America/New_York")
 
 
-def parse_date_time(date_str: str, time_str: str) -> datetime:
-    """
-    ESPN schedule shows month/day plus time like:
-    Mar 21 / 1:00 PM (in rendered view)
-    or split lines like:
-    Mar 21
-    1:00 PM
-    We assume the current year from the schedule page context.
-    """
-    current_year = datetime.now(timezone.utc).year
-    candidate = f"{date_str} {current_year} {time_str}"
-    dt = dateparser.parse(candidate)
+def format_event_local_times(
+    start_local: datetime,
+    location: str,
+    prelims_local: Optional[datetime] = None,
+) -> tuple[str, str, str]:
+    tz = guess_timezone_from_location(location)
 
-    if dt is None:
-        raise ValueError(f"Could not parse date/time: {candidate}")
+    if prelims_local is not None:
+        prelims_display = prelims_local.astimezone(tz)
+        main_display = start_local.astimezone(tz)
+    else:
+        prelims_display = start_local.astimezone(tz)
+        main_display = (start_local + timedelta(hours=3)).astimezone(tz)
 
-    # ESPN schedule shows times in US Eastern on the page.
-    # Treat the scraped time as America/New_York, then convert to UTC
-    # so that each subscriber's calendar can render in their own local time.
-    if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=ZoneInfo("America/New_York"))
+    prelims_time = prelims_display.strftime("%-I:%M %p")
+    main_time = main_display.strftime("%-I:%M %p")
+    tz_label = main_display.strftime("%Z")
+    return prelims_time, main_time, tz_label
 
-    return dt.astimezone(timezone.utc)
+
+#
 
 
 def looks_like_date(line: str) -> bool:
@@ -262,6 +203,18 @@ def looks_like_time(line: str) -> bool:
 
 
 def looks_like_event_title(line: str) -> bool:
+    lower = line.lower()
+    banned = [
+        "travel deals",
+        "collectibles",
+        "shop",
+        "store",
+        "ticket",
+        "how to watch",
+    ]
+    if any(term in lower for term in banned):
+        return False
+
     return (
         line.startswith("UFC ")
         or "Fight Night" in line
@@ -272,110 +225,111 @@ def looks_like_event_title(line: str) -> bool:
 def looks_like_location(line: str) -> bool:
     venue_words = [
         "Arena", "Center", "Centre", "APEX", "Apex", "Stadium",
-        "Garden", "Hall", "Coliseum", "Bank", "Life Centre",
-        "White House", "Place"
+        "Garden", "Hall", "Coliseum", "Bank", "Forum", "Place"
     ]
     return any(word in line for word in venue_words)
 
 
 def parse_espn_schedule_lines(lines: List[str]) -> List[FightEvent]:
-    """
-    Parse only:
-    - This Week's Events
-    - Scheduled Events
-
-    Stop at:
-    - Past Results
-    """
     events: List[FightEvent] = []
-
-    in_upcoming_section = False
     i = 0
+    current_year = datetime.now(timezone.utc).year
 
     while i < len(lines):
         line = lines[i]
 
-        if line == "This Week's Events" or line == "Scheduled Events":
-            in_upcoming_section = True
+        if not looks_like_date(line):
             i += 1
             continue
 
-        if line == "Past Results":
-            break
+        date_str = line
+        window = lines[i + 1:i + 12]
 
-        if not in_upcoming_section:
+        times = [item for item in window if looks_like_time(item)]
+        titles = [item for item in window if looks_like_event_title(item)]
+        locations = [item for item in window if looks_like_location(item)]
+        broadcasters = [
+            item for item in window
+            if item in {"Paramount+", "ESPN+", "ESPN", "TNT Sports", "discovery+", "TBA"}
+        ]
+
+        if not titles or not times:
             i += 1
             continue
 
-        if looks_like_date(line):
-            date_str = line
+        title = titles[0]
+        location = locations[0] if locations else "Location TBA"
+        broadcaster = broadcasters[0] if broadcasters else "TBC"
 
-            # find next times, broadcaster, title, location in a short window
-            window = lines[i + 1:i + 8]
+        try:
+            event_tz = guess_timezone_from_location(location)
 
-            time_main_str = ""
-            time_prelims_str = ""
-            broadcaster = ""
-            title = ""
-            location = ""
-
-            for item in window:
-                if looks_like_time(item):
-                    if not time_prelims_str:
-                        time_prelims_str = item
-                    elif not time_main_str:
-                        time_main_str = item
-                elif not title and looks_like_event_title(item):
-                    title = item
-                elif not location and looks_like_location(item):
-                    location = item
-                elif item in {"Paramount+", "ESPN+", "ESPN", "TNT Sports", "discovery+", "TBA"}:
-                    broadcaster = item
-
-            # If we only saw one time, treat it as the main card start and
-            # leave prelims unknown. If two times, first is prelims, second main.
-            if title and (time_main_str or time_prelims_str):
-                try:
-                    main_time_str = time_main_str or time_prelims_str
-                    start_utc = parse_date_time(date_str, main_time_str)
-
-                    prelims_utc: Optional[datetime] = None
-                    if time_main_str and time_prelims_str:
-                        prelims_utc = parse_date_time(date_str, time_prelims_str)
-                except Exception:
+            if len(times) == 1:
+                prelims_local = None
+                start_local = dateparser.parse(f"{date_str} {current_year} {times[0]}")
+                if start_local is None:
                     i += 1
                     continue
+                start_local = start_local.replace(tzinfo=event_tz)
+            else:
+                prelims_local = dateparser.parse(f"{date_str} {current_year} {times[0]}")
+                start_local = dateparser.parse(f"{date_str} {current_year} {times[1]}")
+                if prelims_local is None or start_local is None:
+                    i += 1
+                    continue
+                prelims_local = prelims_local.replace(tzinfo=event_tz)
+                start_local = start_local.replace(tzinfo=event_tz)
+        except Exception:
+            i += 1
+            continue
 
-                if not location:
-                    location = "Location TBA"
-
-                events.append(
-                    FightEvent(
-                        title=title,
-                        start_utc=start_utc,
-                        location=location,
-                        broadcaster=broadcaster or "TBC",
-                        source_url=ESPN_UFC_SCHEDULE_URL,
-                        prelims_utc=prelims_utc,
-                    )
-                )
+        events.append(
+            FightEvent(
+                title=title,
+                start_local=start_local,
+                location=location,
+                broadcaster=broadcaster,
+                source_url=ESPN_UFC_SCHEDULE_URL,
+                prelims_local=prelims_local,
+            )
+        )
 
         i += 1
 
-    # Deduplicate by title + date
+    return dedupe_future_events(events)
+
+
+def fetch_espn_fallback_events() -> List[FightEvent]:
+    html = fetch_html(ESPN_UFC_SCHEDULE_URL)
+    soup = BeautifulSoup(html, "lxml")
+    for tag in soup(["script", "style", "noscript"]):
+        tag.decompose()
+    raw_text = soup.get_text("\n")
+    lines = [clean_text(line) for line in raw_text.splitlines()]
+    lines = [line for line in lines if line]
+    return parse_espn_schedule_lines(lines)
+
+
+#
+
+
+def normalise_title(title: str) -> str:
+    return re.sub(r"\s+", " ", title.lower()).strip()
+
+
+def dedupe_future_events(events: List[FightEvent]) -> List[FightEvent]:
     deduped: List[FightEvent] = []
     seen = set()
-    for event in events:
-        key = (event.title, event.start_utc.date().isoformat())
+    now = datetime.now(timezone.utc) - timedelta(days=1)
+
+    for event in sorted(events, key=lambda x: x.start_local):
+        if event.start_local.astimezone(timezone.utc) < now:
+            continue
+        key = (normalise_title(event.title), event.start_local.date().isoformat())
         if key in seen:
             continue
         seen.add(key)
         deduped.append(event)
-
-    # Keep only future events
-    now = datetime.now(timezone.utc) - timedelta(days=1)
-    deduped = [e for e in deduped if e.start_utc >= now]
-    deduped.sort(key=lambda x: x.start_utc)
 
     return deduped
 
@@ -392,20 +346,29 @@ def build_calendar(events: List[FightEvent]) -> str:
 
     for item in events:
         dtstamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        dtstart = item.start_utc.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        dtend = (item.start_utc + timedelta(hours=3)).astimezone(timezone.utc).strftime(
-            "%Y%m%dT%H%M%SZ"
+        tzid = item.start_local.tzinfo.key if hasattr(item.start_local.tzinfo, "key") else "UTC"
+        dtstart = item.start_local.strftime("%Y%m%dT%H%M%S")
+        dtend = (item.start_local + timedelta(hours=3)).strftime("%Y%m%dT%H%M%S")
+
+        description = (
+            item.description
+            .replace("\\", "\\\\")
+            .replace("\n", "\\n")
+            .replace(",", "\\,")
+            .replace(";", "\\;")
         )
+        location = item.location.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\\;")
+        title = item.title.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\\;")
 
         vevent = [
             "BEGIN:VEVENT",
             f"UID:{item.uid}",
             f"DTSTAMP:{dtstamp}",
-            f"DTSTART:{dtstart}",
-            f"DTEND:{dtend}",
-            f"SUMMARY:{item.title}",
-            f"DESCRIPTION:{item.description}",
-            f"LOCATION:{item.location}",
+            f"DTSTART;TZID={tzid}:{dtstart}",
+            f"DTEND;TZID={tzid}:{dtend}",
+            f"SUMMARY:{title}",
+            f"DESCRIPTION:{description}",
+            f"LOCATION:{location}",
             f"URL:{ATF_URL}",
             "END:VEVENT",
         ]
@@ -422,7 +385,8 @@ def write_outputs(events: List[FightEvent]) -> None:
     payload = [
         {
             "title": e.title,
-            "start_utc": e.start_utc.isoformat(),
+            "start_local": e.start_local.isoformat(),
+            "prelims_local": e.prelims_local.isoformat() if e.prelims_local else None,
             "location": e.location,
             "broadcaster": e.broadcaster,
             "source_url": e.source_url,
@@ -433,16 +397,53 @@ def write_outputs(events: List[FightEvent]) -> None:
     OUTPUT_JSON.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
 
+def load_existing_events() -> List[FightEvent]:
+    if not OUTPUT_JSON.exists():
+        return []
+
+    try:
+        payload = json.loads(OUTPUT_JSON.read_text(encoding="utf-8"))
+        events: List[FightEvent] = []
+        for item in payload:
+            start_local = dateparser.isoparse(item["start_local"])
+            prelims_local = dateparser.isoparse(item["prelims_local"]) if item.get("prelims_local") else None
+            events.append(
+                FightEvent(
+                    title=item["title"],
+                    start_local=start_local,
+                    location=item.get("location", "Location TBA"),
+                    broadcaster=item.get("broadcaster", "TBC"),
+                    source_url=item.get("source_url", ESPN_UFC_SCHEDULE_URL),
+                    prelims_local=prelims_local,
+                )
+            )
+        return dedupe_future_events(events)
+    except Exception:
+        return []
+
+
 def main() -> None:
-    html = fetch_html(ESPN_UFC_SCHEDULE_URL)
-    lines = extract_visible_lines(html)
-    events = parse_espn_schedule_lines(lines)
+    print("Fetching ESPN UFC schedule...")
+
+    events: List[FightEvent] = []
+    try:
+        events = fetch_espn_fallback_events()
+        print(f"Parsed {len(events)} ESPN events")
+    except Exception as exc:
+        print(f"WARNING: ESPN schedule fetch failed: {exc}")
+
+    events = dedupe_future_events(events)
 
     if len(events) < 2:
-        debug_sample = "\n".join(lines[:120])
+        existing = load_existing_events()
+        if existing:
+            print("WARNING: Parsed too few events. Keeping existing calendar output.")
+            print(f"Existing cached events retained: {len(existing)}")
+            return
+
         raise RuntimeError(
-            "Parsed too few UFC events. Refusing to overwrite calendar.\n\n"
-            f"First visible lines for debugging:\n{debug_sample}"
+            "Parsed too few UFC events and no existing cache is available. "
+            "Refusing to overwrite calendar."
         )
 
     write_outputs(events)
