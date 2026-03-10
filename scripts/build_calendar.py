@@ -79,7 +79,7 @@ class FightEvent:
             "",
             atf_blurb,
             "",
-        f"Watch along for free on Against The Fence {ATF_URL}",
+        f"Watch along for free on Against The Fence",
             "",
         ]
         return "\n".join(lines)
