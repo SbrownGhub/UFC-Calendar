@@ -79,7 +79,7 @@ class FightEvent:
             "",
             atf_blurb,
             "",
-        f"Watch along for free on Against The Fence",
+        f"Watch along for free on Against The Fence (click the link)",
             "",
         ]
         return "\n".join(lines)
@@ -155,8 +155,6 @@ def guess_timezone_from_location(location: str) -> ZoneInfo:
     if any(token in loc for token in ["new york", "ny", "newark", "new jersey", "nj", "miami", "florida", "fl", "orlando", "philadelphia", "charlotte", "north carolina", "nc", "atlanta", "boston", "massachusetts", "ma", "washington dc"]):
         return ZoneInfo("America/New_York")
 
-    if "abu dhabi" in loc or "united arab emirates" in loc or "yas island" in loc:
-        return ZoneInfo("Asia/Dubai")
     if "london" in loc or "england" in loc or "o2 arena" in loc:
         return ZoneInfo("Europe/London")
     if "paris" in loc or "france" in loc:
