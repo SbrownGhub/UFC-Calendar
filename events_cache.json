@@ -1,17 +1,8 @@
 [
   {
-    "title": "UFC Fight Night: Emmett vs. Vallejos",
-    "start_local": "2026-03-14T17:00:00-07:00",
-    "prelims_local": null,
-    "location": "Meta APEX, Las Vegas, NV",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "d5dc1f93-5c08-5cca-9f84-1a2613dcebfb@againstthefence.com"
-  },
-  {
     "title": "UFC Fight Night: Evloev vs. Murphy",
-    "start_local": "2026-03-21T17:00:00+00:00",
-    "prelims_local": "2026-03-21T13:00:00+00:00",
+    "start_local": "2026-03-21T13:00:00+00:00",
+    "prelims_local": null,
     "location": "O2 Arena (ENG), London, England",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
@@ -19,7 +10,7 @@
   },
   {
     "title": "UFC Fight Night: Adesanya vs. Pyfer",
-    "start_local": "2026-03-28T16:00:00-07:00",
+    "start_local": "2026-03-28T17:00:00-07:00",
     "prelims_local": "2026-03-28T17:00:00-07:00",
     "location": "Climate Pledge Arena, Seattle, WA",
     "broadcaster": "Paramount+",
@@ -29,7 +20,7 @@
   {
     "title": "UFC Fight Night: Moicano vs. Duncan",
     "start_local": "2026-04-04T17:00:00-07:00",
-    "prelims_local": "2026-04-04T16:00:00-07:00",
+    "prelims_local": "2026-04-04T17:00:00-07:00",
     "location": "Meta APEX, Las Vegas, NV",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
@@ -54,17 +45,17 @@
     "uid": "ceb38f35-1d43-5e1d-be4a-aed8439245d2@againstthefence.com"
   },
   {
-    "title": "UFC Fight Night: Brady vs. Buckley",
+    "title": "UFC Fight Night: Sterling vs. Zalal",
     "start_local": "2026-04-25T04:00:00-07:00",
     "prelims_local": "2026-04-25T17:00:00-07:00",
     "location": "Meta APEX, Las Vegas, NV",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "7898f7fb-37a1-5710-8dc1-c492fd147f32@againstthefence.com"
+    "uid": "fe52abce-6034-5fd8-b47c-911cf49ec985@againstthefence.com"
   },
   {
     "title": "UFC Fight Night: Della Maddalena vs. Prates",
-    "start_local": "2026-05-02T16:00:00-07:00",
+    "start_local": "2026-05-02T17:00:00-07:00",
     "prelims_local": "2026-05-02T04:00:00-07:00",
     "location": "RAC Arena (AUS), Perth, WA, Australia",
     "broadcaster": "Paramount+",
@@ -72,13 +63,40 @@
     "uid": "394e6679-0660-5128-bff8-2edd336cbb18@againstthefence.com"
   },
   {
-    "title": "UFC Fight Night: 5/30",
-    "start_local": "2026-05-30T20:00:00-07:00",
+    "title": "UFC 328: Chimaev vs. Strickland",
+    "start_local": "2026-05-09T18:00:00-04:00",
+    "prelims_local": "2026-05-09T17:00:00-04:00",
+    "location": "Prudential Center, Newark, NJ",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "a21ca37d-2c59-544a-bd73-a031eaece866@againstthefence.com"
+  },
+  {
+    "title": "UFC Fight Night: Allen vs. Costa",
+    "start_local": "2026-05-16T16:00:00-07:00",
+    "prelims_local": "2026-05-16T18:00:00-07:00",
+    "location": "Meta APEX, Las Vegas, NV",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "48ebf27f-87c5-5e99-a76f-e4ac215d5838@againstthefence.com"
+  },
+  {
+    "title": "UFC Fight Night: Song vs. Figueiredo",
+    "start_local": "2026-05-30T17:00:00-07:00",
     "prelims_local": "2026-05-30T16:00:00-07:00",
     "location": "Galaxy Arena, Cotai, Macau",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "33721857-1cc5-5206-8f10-02189143fcb2@againstthefence.com"
+    "uid": "9b336b14-6ef1-508e-88b2-2b93cf6fc063@againstthefence.com"
+  },
+  {
+    "title": "UFC Fight Night: Muhammad vs. Bonfim",
+    "start_local": "2026-06-06T20:00:00-07:00",
+    "prelims_local": "2026-06-06T17:00:00-07:00",
+    "location": "Meta APEX, Las Vegas, NV",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "217b597a-85ba-5434-a27e-b7090f98b9fa@againstthefence.com"
   },
   {
     "title": "UFC Freedom 250: Topuria vs. Gaethje",
