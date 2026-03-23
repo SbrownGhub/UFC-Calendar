@@ -1,17 +1,8 @@
 [
   {
-    "title": "UFC Fight Night: Evloev vs. Murphy",
-    "start_local": "2026-03-21T13:00:00+00:00",
-    "prelims_local": null,
-    "location": "O2 Arena (ENG), London, England",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "9a9c3368-3b6b-56e7-b735-9d49704b22a6@againstthefence.com"
-  },
-  {
     "title": "UFC Fight Night: Adesanya vs. Pyfer",
     "start_local": "2026-03-28T17:00:00-07:00",
-    "prelims_local": "2026-03-28T17:00:00-07:00",
+    "prelims_local": null,
     "location": "Climate Pledge Arena, Seattle, WA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
