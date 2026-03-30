@@ -1,17 +1,8 @@
 [
   {
-    "title": "UFC Fight Night: Adesanya vs. Pyfer",
-    "start_local": "2026-03-28T17:00:00-07:00",
-    "prelims_local": null,
-    "location": "Climate Pledge Arena, Seattle, WA",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "7eb295f2-0e72-5a03-aad3-0fcb14ed68a3@againstthefence.com"
-  },
-  {
     "title": "UFC Fight Night: Moicano vs. Duncan",
     "start_local": "2026-04-04T17:00:00-07:00",
-    "prelims_local": "2026-04-04T17:00:00-07:00",
+    "prelims_local": null,
     "location": "Meta APEX, Las Vegas, NV",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
