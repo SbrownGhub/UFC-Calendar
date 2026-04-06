@@ -5,28 +5,18 @@ X-WR-CALNAME:UFC Event Schedule
 X-WR-CALDESC:Free UFC event calendar by Against The Fence
 X-WR-TIMEZONE:UTC
 BEGIN:VEVENT
-UID:b0c401af-0ee9-58e3-857a-bf0857f51946@againstthefence.com
-DTSTAMP:20260330T102321Z
-DTSTART;TZID=America/Los_Angeles:20260404T170000
-DTEND;TZID=America/Los_Angeles:20260404T200000
-SUMMARY:UFC Fight Night: Moicano vs. Duncan
-DESCRIPTION:Where to watch\nUFC Fight Night: Moicano vs. Duncan main card streams on Paramount+ at 8:00 PM\, PDT.\nThe prelims stream on Paramount+ at 5:00 PM\, PDT.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Meta APEX\, Las Vegas\, NV
-URL:https://www.youtube.com/c/AgainstTheFence
-END:VEVENT
-BEGIN:VEVENT
 UID:0856be92-934e-5ae0-b8f9-957a8256a90a@againstthefence.com
-DTSTAMP:20260330T102321Z
-DTSTART;TZID=America/New_York:20260411T190000
-DTEND;TZID=America/New_York:20260411T220000
+DTSTAMP:20260406T101549Z
+DTSTART;TZID=America/New_York:20260411T170000
+DTEND;TZID=America/New_York:20260411T200000
 SUMMARY:UFC 327: Procházka vs. Ulberg
-DESCRIPTION:Where to watch\nUFC 327: Procházka vs. Ulberg main card streams on Paramount+ at 7:00 PM\, EDT.\nThe prelims stream on Paramount+ at 5:00 PM\, EDT.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+DESCRIPTION:Where to watch\nUFC 327: Procházka vs. Ulberg main card streams on Paramount+ at 8:00 PM\, EDT.\nThe prelims stream on Paramount+ at 5:00 PM\, EDT.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
 LOCATION:Kaseya Center\, Miami\, FL
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:ceb38f35-1d43-5e1d-be4a-aed8439245d2@againstthefence.com
-DTSTAMP:20260330T102321Z
+DTSTAMP:20260406T101549Z
 DTSTART;TZID=America/Los_Angeles:20260418T170000
 DTEND;TZID=America/Los_Angeles:20260418T200000
 SUMMARY:UFC Fight Night: Burns vs. Malott
@@ -36,7 +26,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:fe52abce-6034-5fd8-b47c-911cf49ec985@againstthefence.com
-DTSTAMP:20260330T102321Z
+DTSTAMP:20260406T101549Z
 DTSTART;TZID=America/Los_Angeles:20260425T040000
 DTEND;TZID=America/Los_Angeles:20260425T070000
 SUMMARY:UFC Fight Night: Sterling vs. Zalal
@@ -46,7 +36,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:394e6679-0660-5128-bff8-2edd336cbb18@againstthefence.com
-DTSTAMP:20260330T102321Z
+DTSTAMP:20260406T101549Z
 DTSTART;TZID=America/Los_Angeles:20260502T170000
 DTEND;TZID=America/Los_Angeles:20260502T200000
 SUMMARY:UFC Fight Night: Della Maddalena vs. Prates
@@ -56,7 +46,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:a21ca37d-2c59-544a-bd73-a031eaece866@againstthefence.com
-DTSTAMP:20260330T102321Z
+DTSTAMP:20260406T101549Z
 DTSTART;TZID=America/New_York:20260509T180000
 DTEND;TZID=America/New_York:20260509T210000
 SUMMARY:UFC 328: Chimaev vs. Strickland
@@ -66,7 +56,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:48ebf27f-87c5-5e99-a76f-e4ac215d5838@againstthefence.com
-DTSTAMP:20260330T102321Z
+DTSTAMP:20260406T101549Z
 DTSTART;TZID=America/Los_Angeles:20260516T160000
 DTEND;TZID=America/Los_Angeles:20260516T190000
 SUMMARY:UFC Fight Night: Allen vs. Costa
@@ -76,7 +66,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:9b336b14-6ef1-508e-88b2-2b93cf6fc063@againstthefence.com
-DTSTAMP:20260330T102321Z
+DTSTAMP:20260406T101549Z
 DTSTART;TZID=America/Los_Angeles:20260530T170000
 DTEND;TZID=America/Los_Angeles:20260530T200000
 SUMMARY:UFC Fight Night: Song vs. Figueiredo
@@ -86,7 +76,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:217b597a-85ba-5434-a27e-b7090f98b9fa@againstthefence.com
-DTSTAMP:20260330T102321Z
+DTSTAMP:20260406T101549Z
 DTSTART;TZID=America/Los_Angeles:20260606T200000
 DTEND;TZID=America/Los_Angeles:20260606T230000
 SUMMARY:UFC Fight Night: Muhammad vs. Bonfim
@@ -96,7 +86,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:4cba56ee-47fe-55f1-a281-552fd73eadb8@againstthefence.com
-DTSTAMP:20260330T102321Z
+DTSTAMP:20260406T101549Z
 DTSTART;TZID=America/Los_Angeles:20260614T200000
 DTEND;TZID=America/Los_Angeles:20260614T230000
 SUMMARY:UFC Freedom 250: Topuria vs. Gaethje

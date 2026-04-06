@@ -1,17 +1,8 @@
 [
   {
-    "title": "UFC Fight Night: Moicano vs. Duncan",
-    "start_local": "2026-04-04T17:00:00-07:00",
-    "prelims_local": null,
-    "location": "Meta APEX, Las Vegas, NV",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "b0c401af-0ee9-58e3-857a-bf0857f51946@againstthefence.com"
-  },
-  {
     "title": "UFC 327: Proch\u00e1zka vs. Ulberg",
-    "start_local": "2026-04-11T19:00:00-04:00",
-    "prelims_local": "2026-04-11T17:00:00-04:00",
+    "start_local": "2026-04-11T17:00:00-04:00",
+    "prelims_local": null,
     "location": "Kaseya Center, Miami, FL",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
