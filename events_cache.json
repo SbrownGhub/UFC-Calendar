@@ -1,17 +1,8 @@
 [
   {
-    "title": "UFC 327: Proch\u00e1zka vs. Ulberg",
-    "start_local": "2026-04-11T17:00:00-04:00",
-    "prelims_local": null,
-    "location": "Kaseya Center, Miami, FL",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "0856be92-934e-5ae0-b8f9-957a8256a90a@againstthefence.com"
-  },
-  {
     "title": "UFC Fight Night: Burns vs. Malott",
     "start_local": "2026-04-18T17:00:00-07:00",
-    "prelims_local": "2026-04-18T19:00:00-07:00",
+    "prelims_local": null,
     "location": "Canada Life Centre, Winnipeg, MB, Canada",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
@@ -73,11 +64,20 @@
   },
   {
     "title": "UFC Freedom 250: Topuria vs. Gaethje",
-    "start_local": "2026-06-14T20:00:00-07:00",
-    "prelims_local": null,
-    "location": "Location TBA",
+    "start_local": "2026-06-14T16:00:00-07:00",
+    "prelims_local": "2026-06-14T20:00:00-07:00",
+    "location": "T-Mobile Arena, Las Vegas, NV",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
     "uid": "4cba56ee-47fe-55f1-a281-552fd73eadb8@againstthefence.com"
+  },
+  {
+    "title": "UFC 329",
+    "start_local": "2026-07-11T16:00:00-07:00",
+    "prelims_local": null,
+    "location": "T-Mobile Arena, Las Vegas, NV",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "f57f82dd-cd69-5cb5-8405-19e727f855af@againstthefence.com"
   }
 ]
