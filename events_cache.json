@@ -1,17 +1,8 @@
 [
   {
-    "title": "UFC Fight Night: Burns vs. Malott",
-    "start_local": "2026-04-18T17:00:00-07:00",
-    "prelims_local": null,
-    "location": "Canada Life Centre, Winnipeg, MB, Canada",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "ceb38f35-1d43-5e1d-be4a-aed8439245d2@againstthefence.com"
-  },
-  {
     "title": "UFC Fight Night: Sterling vs. Zalal",
-    "start_local": "2026-04-25T04:00:00-07:00",
-    "prelims_local": "2026-04-25T17:00:00-07:00",
+    "start_local": "2026-04-25T17:00:00-07:00",
+    "prelims_local": null,
     "location": "Meta APEX, Las Vegas, NV",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
@@ -28,7 +19,7 @@
   },
   {
     "title": "UFC 328: Chimaev vs. Strickland",
-    "start_local": "2026-05-09T18:00:00-04:00",
+    "start_local": "2026-05-09T17:00:00-04:00",
     "prelims_local": "2026-05-09T17:00:00-04:00",
     "location": "Prudential Center, Newark, NJ",
     "broadcaster": "Paramount+",
@@ -37,8 +28,8 @@
   },
   {
     "title": "UFC Fight Night: Allen vs. Costa",
-    "start_local": "2026-05-16T16:00:00-07:00",
-    "prelims_local": "2026-05-16T18:00:00-07:00",
+    "start_local": "2026-05-16T04:00:00-07:00",
+    "prelims_local": "2026-05-16T17:00:00-07:00",
     "location": "Meta APEX, Las Vegas, NV",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
@@ -47,7 +38,7 @@
   {
     "title": "UFC Fight Night: Song vs. Figueiredo",
     "start_local": "2026-05-30T17:00:00-07:00",
-    "prelims_local": "2026-05-30T16:00:00-07:00",
+    "prelims_local": "2026-05-30T04:00:00-07:00",
     "location": "Galaxy Arena, Cotai, Macau",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
@@ -73,11 +64,20 @@
   },
   {
     "title": "UFC 329",
-    "start_local": "2026-07-11T16:00:00-07:00",
-    "prelims_local": null,
+    "start_local": "2026-07-11T17:00:00-07:00",
+    "prelims_local": "2026-07-11T16:00:00-07:00",
     "location": "T-Mobile Arena, Las Vegas, NV",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
     "uid": "f57f82dd-cd69-5cb5-8405-19e727f855af@againstthefence.com"
+  },
+  {
+    "title": "UFC 330",
+    "start_local": "2026-08-15T17:00:00-05:00",
+    "prelims_local": null,
+    "location": "Xfinity Mobile Arena, Philadelphia, PA",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "8ced2127-55c8-5bfa-b7d4-b54228ff5ee9@againstthefence.com"
   }
 ]
