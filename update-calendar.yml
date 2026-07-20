@@ -1,0 +1,44 @@
+name: Update UFC Calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays and Thursdays 09:00 UTC - twice weekly catches midweek
+    # card changes and halves the staleness window.
+    - cron: "0 9 * * 1,4"
+
+permissions:
+  contents: write
+
+jobs:
+  update-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # If this step fails, the whole run goes red and GitHub emails you.
+      # The old calendar files are left untouched on failure.
+      - name: Build calendar
+        run: python scripts/build_calendar.py
+
+      # last_run.txt changes every successful run, so there is ALWAYS a
+      # commit. That keeps the repo "active" and stops GitHub from
+      # auto-disabling this schedule after 60 quiet days (which is
+      # exactly what killed it in June 2026).
+      - name: Commit updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ufc_espn_schedule.ics events_cache.json last_run.txt
+          git diff --cached --quiet || git commit -m "UFC calendar update"
+          git push
