@@ -2,16 +2,16 @@
 ATF UFC Calendar builder.
 
 Key design decisions (learned the hard way):
-  1. ESPN lists schedule times in US Eastern (ET). We parse them as ET,
-     never as the venue's timezone.
-  2. All ICS events are written in UTC ("Z" timestamps). Every calendar
-     client (Google, Apple, Outlook) converts UTC to the viewer's local
-     time automatically, DST included. No TZID, no VTIMEZONE, no guessing.
-  3. Primary data source is ESPN's JSON scoreboard API (returns UTC ISO
-     dates directly). The HTML text-scrape is only a fallback.
-  4. If we can't get a sane schedule, we KEEP the old calendar files but
-     exit non-zero so the GitHub Actions run fails loudly and you get an
-     email. No more silent staleness.
+  1. The FULL schedule lives in ESPN's leagues[0].calendar[] array, each entry
+     carrying a UTC startDate. The top-level events[] array only holds the
+     current/most-recent card, so reading it gets you one stale event and an
+     empty calendar. We read calendar[].  <-- this was THE bug.
+  2. calendar[] startDate is already UTC ISO ("...Z"). No timezone guessing.
+  3. All ICS events are written in UTC ("Z" timestamps). Every calendar client
+     (Google, Apple, Outlook) converts UTC to the viewer's local time itself,
+     DST included. No TZID, no VTIMEZONE.
+  4. If we can't get a sane schedule from any source, we KEEP the old files but
+     exit non-zero so the GitHub Actions run fails loudly and emails you.
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from html import unescape
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import requests
 from bs4 import BeautifulSoup
@@ -36,10 +36,8 @@ OUTPUT_ICS = ROOT / "ufc_espn_schedule.ics"
 OUTPUT_JSON = ROOT / "events_cache.json"
 HEARTBEAT = ROOT / "last_run.txt"
 
-ESPN_API_URL = (
-    "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard"
-    "?dates={start}-{end}&limit=100"
-)
+# Bare scoreboard endpoint returns the current season's full calendar[].
+ESPN_API_URL = "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard"
 ESPN_UFC_SCHEDULE_URL = "https://www.espn.com/mma/schedule/_/league/ufc"
 ATF_URL = "https://www.youtube.com/c/AgainstTheFence"
 
@@ -65,6 +63,7 @@ HEADERS = {
         "Chrome/122.0.0.0 Safari/537.36"
     ),
     "Accept-Language": "en-GB,en;q=0.9",
+    "Accept": "application/json, text/plain, */*",
 }
 
 
@@ -89,7 +88,6 @@ class FightEvent:
     @property
     def description(self) -> str:
         where = self.broadcaster if self.broadcaster not in ("", "TBC", "TBA") else "Paramount+"
-
         main_uk = self.main_utc.astimezone(UK)
         main_et = self.main_utc.astimezone(ET)
         lines = ["Where to watch"]
@@ -100,16 +98,14 @@ class FightEvent:
         if self.prelims_utc:
             pre_uk = self.prelims_utc.astimezone(UK)
             pre_et = self.prelims_utc.astimezone(ET)
-            lines.append(
-                f"Prelims: {fmt(pre_uk)} UK time ({fmt(pre_et)} ET) on {where}."
-            )
+            lines.append(f"Prelims: {fmt(pre_uk)} UK time ({fmt(pre_et)} ET) on {where}.")
         blurb = ATF_BLURBS[self.main_utc.isocalendar().week % len(ATF_BLURBS)]
         lines += ["", blurb, "", "Watch along for free on Against The Fence (click the link)", ""]
         return "\n".join(lines)
 
 
 def fmt(dt: datetime) -> str:
-    """e.g. '3:00 AM Sun' -- day marker matters for UK viewers of US cards."""
+    """e.g. '3:00 AM Sun' -- the day marker matters for UK viewers of US cards."""
     return dt.strftime("%-I:%M %p %a")
 
 
@@ -127,76 +123,89 @@ def fetch(url: str) -> requests.Response:
     return resp
 
 
+def is_ufc_card(label: str) -> bool:
+    l = label.strip()
+    lower = l.lower()
+    if any(b in lower for b in ("travel deals", "collectibles", "how to watch", "ticket")):
+        return False
+    return l.startswith("UFC") or "Fight Night" in l or l.startswith("Noche")
+
+
 # --------------------------------------------------------------------------
-# Source 1 (primary): ESPN JSON scoreboard API. Dates come back as ISO UTC,
-# so there is zero timezone guesswork.
+# Source 1 (primary): ESPN scoreboard JSON -> leagues[0].calendar[]
+# This holds the FULL announced schedule with UTC start times. The top-level
+# events[] array only holds the current card, which is why the old code that
+# read events[] produced an empty calendar.
 # --------------------------------------------------------------------------
+
+def _overlay_details(data: dict) -> Dict[str, Tuple[Optional[str], Optional[str]]]:
+    """Pull venue + broadcaster from events[] for any card that appears there.
+    Free (no extra requests); enriches whatever ESPN happens to expose today."""
+    out: Dict[str, Tuple[Optional[str], Optional[str]]] = {}
+    for ev in (data.get("events") or []):
+        eid = str(ev.get("id", ""))
+        venue_str = None
+        comps = ev.get("competitions") or []
+        if comps:
+            v = comps[0].get("venue") or {}
+            addr = v.get("address") or {}
+            parts = [v.get("fullName", ""), addr.get("city", ""),
+                     addr.get("state", ""), addr.get("country", "")]
+            venue_str = ", ".join(p for p in parts if p) or None
+        bcast = ev.get("broadcast") or None
+        if not bcast:
+            for b in (comps[0].get("broadcasts") if comps else []) or []:
+                names = b.get("names") or []
+                if names:
+                    bcast = names[0]
+                    break
+        out[eid] = (venue_str, bcast)
+    return out
+
 
 def fetch_api_events() -> List[FightEvent]:
-    now = datetime.now(UTC)
-    start = now.strftime("%Y%m%d")
-    end = (now + timedelta(days=240)).strftime("%Y%m%d")
-    url = ESPN_API_URL.format(start=start, end=end)
+    data = fetch(ESPN_API_URL).json()
+    leagues = data.get("leagues") or []
+    if not leagues:
+        return []
+    calendar = leagues[0].get("calendar") or []
+    overlay = _overlay_details(data)
 
-    data = fetch(url).json()
-    raw_events = data.get("events") or []
     events: List[FightEvent] = []
-
-    for ev in raw_events:
-        name = clean_text(ev.get("name") or ev.get("shortName") or "")
-        if not name:
-            continue
-        # Keep it to real UFC cards, skip stray non-UFC listings.
-        if not (name.startswith("UFC") or "Fight Night" in name or name.startswith("Noche")):
-            continue
-
-        date_str = ev.get("date")
-        if not date_str:
+    for entry in calendar:
+        label = clean_text(entry.get("label", ""))
+        start = entry.get("startDate")
+        if not label or not start or not is_ufc_card(label):
             continue
         try:
-            main_utc = dateparser.isoparse(date_str)
+            main_utc = dateparser.isoparse(start)
             if main_utc.tzinfo is None:
                 main_utc = main_utc.replace(tzinfo=UTC)
             main_utc = main_utc.astimezone(UTC)
         except (ValueError, TypeError):
             continue
 
-        location = "Location TBA"
-        broadcaster = "TBC"
-        comps = ev.get("competitions") or []
-        if comps:
-            venue = comps[0].get("venue") or {}
-            parts = [venue.get("fullName", "")]
-            addr = venue.get("address") or {}
-            parts += [addr.get("city", ""), addr.get("state", ""), addr.get("country", "")]
-            loc = ", ".join(p for p in parts if p)
-            if loc:
-                location = loc
-            casts = comps[0].get("broadcasts") or []
-            for b in casts:
-                names = b.get("names") or []
-                if names:
-                    broadcaster = names[0]
-                    break
+        ref = ((entry.get("event") or {}).get("$ref")) or ""
+        m = re.search(r"/events/(\d+)", ref)
+        eid = m.group(1) if m else ""
+        venue_str, bcast = overlay.get(eid, (None, None))
 
         events.append(
             FightEvent(
-                title=name,
+                title=label,
                 main_utc=main_utc,
-                location=location,
-                broadcaster=broadcaster,
+                location=venue_str or "Location TBA",
+                broadcaster=bcast or "Paramount+",
                 source_url=ESPN_UFC_SCHEDULE_URL,
-                prelims_utc=None,  # API gives card start; prelims sanity-checked in finalise()
+                prelims_utc=None,  # calendar[] gives main-card start only
             )
         )
-
     return finalise(events)
 
 
 # --------------------------------------------------------------------------
 # Source 2 (fallback): scrape the ESPN schedule page text.
-# CRITICAL: ESPN lists these times in US Eastern. Parse as ET, then convert
-# to UTC. Never attach the venue's timezone to a listed time.
+# CRITICAL: ESPN lists these times in US Eastern. Parse as ET, convert to UTC.
 # --------------------------------------------------------------------------
 
 def looks_like_date(line: str) -> bool:
@@ -208,11 +217,7 @@ def looks_like_time(line: str) -> bool:
 
 
 def looks_like_event_title(line: str) -> bool:
-    lower = line.lower()
-    banned = ["travel deals", "collectibles", "shop", "store", "ticket", "how to watch"]
-    if any(term in lower for term in banned):
-        return False
-    return line.startswith("UFC ") or "Fight Night" in line or line.startswith("Noche UFC")
+    return is_ufc_card(line)
 
 
 def looks_like_location(line: str) -> bool:
@@ -222,8 +227,7 @@ def looks_like_location(line: str) -> bool:
 
 
 def resolve_year(month_day: str, now: datetime) -> int:
-    """Fix the December->January rollover: if the parsed date would land
-    more than 45 days in the past, it belongs to next year."""
+    """Handle the Dec->Jan rollover: a date landing >45 days in the past is next year."""
     year = now.year
     try:
         candidate = dateparser.parse(f"{month_day} {year}")
@@ -238,7 +242,6 @@ def parse_espn_schedule_lines(lines: List[str]) -> List[FightEvent]:
     events: List[FightEvent] = []
     now = datetime.now(UTC)
     i = 0
-
     while i < len(lines):
         line = lines[i]
         if not looks_like_date(line):
@@ -246,18 +249,17 @@ def parse_espn_schedule_lines(lines: List[str]) -> List[FightEvent]:
             continue
 
         date_str = line
-        # Window ends at the next date line so times can't bleed between events.
         window: List[str] = []
         j = i + 1
         while j < len(lines) and not looks_like_date(lines[j]) and len(window) < 12:
             window.append(lines[j])
             j += 1
 
-        times = [item for item in window if looks_like_time(item)]
-        titles = [item for item in window if looks_like_event_title(item)]
-        locations = [item for item in window if looks_like_location(item)]
-        broadcasters = [item for item in window
-                        if item in {"Paramount+", "ESPN+", "ESPN", "TNT Sports", "discovery+", "TBA"}]
+        times = [x for x in window if looks_like_time(x)]
+        titles = [x for x in window if looks_like_event_title(x)]
+        locations = [x for x in window if looks_like_location(x)]
+        broadcasters = [x for x in window
+                        if x in {"Paramount+", "ESPN+", "ESPN", "TNT Sports", "discovery+", "TBA"}]
 
         if not titles or not times:
             i = j
@@ -265,7 +267,7 @@ def parse_espn_schedule_lines(lines: List[str]) -> List[FightEvent]:
 
         title = titles[0]
         location = locations[0] if locations else "Location TBA"
-        broadcaster = broadcasters[0] if broadcasters else "TBC"
+        broadcaster = broadcasters[0] if broadcasters else "Paramount+"
         year = resolve_year(date_str, now)
 
         parsed: List[datetime] = []
@@ -275,33 +277,24 @@ def parse_espn_schedule_lines(lines: List[str]) -> List[FightEvent]:
             except (ValueError, OverflowError):
                 dt = None
             if dt is not None:
-                # ESPN times are Eastern. Full stop.
-                parsed.append(dt.replace(tzinfo=ET).astimezone(UTC))
+                parsed.append(dt.replace(tzinfo=ET).astimezone(UTC))  # ESPN times are ET
 
         if not parsed:
             i = j
             continue
 
-        parsed.sort()  # earliest = prelims, latest = main card
+        parsed.sort()
         if len(parsed) >= 2 and (parsed[-1] - parsed[0]) <= timedelta(hours=6):
             prelims_utc, main_utc = parsed[0], parsed[-1]
         else:
-            # One time, or two times too far apart to trust (old scramble bug).
-            main_utc = parsed[-1]
-            prelims_utc = None
+            main_utc, prelims_utc = parsed[-1], None
 
         events.append(
-            FightEvent(
-                title=title,
-                main_utc=main_utc,
-                location=location,
-                broadcaster=broadcaster,
-                source_url=ESPN_UFC_SCHEDULE_URL,
-                prelims_utc=prelims_utc,
-            )
+            FightEvent(title=title, main_utc=main_utc, location=location,
+                       broadcaster=broadcaster, source_url=ESPN_UFC_SCHEDULE_URL,
+                       prelims_utc=prelims_utc)
         )
         i = j
-
     return finalise(events)
 
 
@@ -319,18 +312,16 @@ def fetch_html_events() -> List[FightEvent]:
 # --------------------------------------------------------------------------
 
 def finalise(events: List[FightEvent]) -> List[FightEvent]:
-    """Dedupe, drop past events, enforce sanity."""
     deduped: List[FightEvent] = []
     seen = set()
     cutoff = datetime.now(UTC) - timedelta(days=1)
-
     for ev in sorted(events, key=lambda x: x.main_utc):
         if ev.main_utc < cutoff:
             continue
         if ev.prelims_utc is not None:
             gap = ev.main_utc - ev.prelims_utc
             if gap <= timedelta(0) or gap > timedelta(hours=6):
-                ev.prelims_utc = None  # never publish prelims after mains
+                ev.prelims_utc = None
         key = (normalise_title(ev.title), ev.main_utc.date().isoformat())
         if key in seen:
             continue
@@ -355,9 +346,7 @@ def build_calendar(events: List[FightEvent]) -> str:
         "REFRESH-INTERVAL;VALUE=DURATION:PT12H",
     ]
     stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
-
     for item in events:
-        # Event block spans prelims (if known) through main card + 3h.
         block_start = item.prelims_utc or item.main_utc
         block_end = item.main_utc + timedelta(hours=3)
         lines += [
@@ -394,16 +383,13 @@ def write_outputs(events: List[FightEvent]) -> None:
 
 
 def main() -> None:
-    HEARTBEAT.write_text(
-        f"Last run: {datetime.now(UTC).isoformat()}\n", encoding="utf-8"
-    )
+    HEARTBEAT.write_text(f"Last run: {datetime.now(UTC).isoformat()}\n", encoding="utf-8")
 
     events: List[FightEvent] = []
-
-    print("Trying ESPN scoreboard API...")
+    print("Trying ESPN scoreboard API (calendar[])...")
     try:
         events = fetch_api_events()
-        print(f"API returned {len(events)} usable events")
+        print(f"API returned {len(events)} upcoming events")
     except Exception as exc:
         print(f"WARNING: ESPN API failed: {exc}")
 
@@ -411,20 +397,18 @@ def main() -> None:
         print("Falling back to ESPN schedule page scrape...")
         try:
             events = fetch_html_events()
-            print(f"Scrape returned {len(events)} usable events")
+            print(f"Scrape returned {len(events)} upcoming events")
         except Exception as exc:
             print(f"WARNING: ESPN scrape failed: {exc}")
 
     if len(events) < 2:
-        # Keep the existing calendar on disk, but FAIL the run so GitHub
-        # emails you. Silence is how this broke last time.
         print("ERROR: Could not build a trustworthy schedule from any source.")
         print("Existing calendar files left untouched. Failing loudly on purpose.")
         sys.exit(1)
 
     write_outputs(events)
     print(f"Wrote {len(events)} events to {OUTPUT_ICS.name}")
-    for e in events[:6]:
+    for e in events[:8]:
         print(f"  {e.main_utc.astimezone(UK).strftime('%a %d %b %H:%M')} UK | {e.title}")
 
 
