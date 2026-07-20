@@ -1,83 +1,83 @@
 [
   {
-    "title": "UFC Fight Night: Sterling vs. Zalal",
-    "start_local": "2026-04-25T17:00:00-07:00",
-    "prelims_local": null,
-    "location": "Meta APEX, Las Vegas, NV",
+    "title": "UFC Fight Night: Ankalaev vs. Guskov",
+    "main_utc": "2026-07-25T16:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Etihad Arena, Abu Dhabi, United Arab Emirates",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "fe52abce-6034-5fd8-b47c-911cf49ec985@againstthefence.com"
+    "uid": "ab0a9339-ec1f-5a2f-842c-00a4fea00c97@againstthefence.com"
   },
   {
-    "title": "UFC Fight Night: Della Maddalena vs. Prates",
-    "start_local": "2026-05-02T17:00:00-07:00",
-    "prelims_local": "2026-05-02T04:00:00-07:00",
-    "location": "RAC Arena (AUS), Perth, WA, Australia",
+    "title": "UFC Fight Night: Medi\u0107 vs. Rodriguez",
+    "main_utc": "2026-08-01T17:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "394e6679-0660-5128-bff8-2edd336cbb18@againstthefence.com"
+    "uid": "b6194c5b-dc9c-58ec-a950-b8296dc607fe@againstthefence.com"
   },
   {
-    "title": "UFC 328: Chimaev vs. Strickland",
-    "start_local": "2026-05-09T17:00:00-04:00",
-    "prelims_local": "2026-05-09T17:00:00-04:00",
-    "location": "Prudential Center, Newark, NJ",
+    "title": "UFC Fight Night: Gamrot vs Salkilld",
+    "main_utc": "2026-08-08T21:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "a21ca37d-2c59-544a-bd73-a031eaece866@againstthefence.com"
+    "uid": "c6a94684-7042-5dec-9bc0-34ff1d757af8@againstthefence.com"
   },
   {
-    "title": "UFC Fight Night: Allen vs. Costa",
-    "start_local": "2026-05-16T04:00:00-07:00",
-    "prelims_local": "2026-05-16T17:00:00-07:00",
-    "location": "Meta APEX, Las Vegas, NV",
+    "title": "UFC 330: Makhachev vs. Machado Garry",
+    "main_utc": "2026-08-16T00:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "48ebf27f-87c5-5e99-a76f-e4ac215d5838@againstthefence.com"
+    "uid": "493ca2fc-20dc-5b19-b3d9-f5ef8d4c2b88@againstthefence.com"
   },
   {
-    "title": "UFC Fight Night: Song vs. Figueiredo",
-    "start_local": "2026-05-30T17:00:00-07:00",
-    "prelims_local": "2026-05-30T04:00:00-07:00",
-    "location": "Galaxy Arena, Cotai, Macau",
+    "title": "UFC Fight Night: Hernandez vs. Rodrigues",
+    "main_utc": "2026-08-23T00:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "9b336b14-6ef1-508e-88b2-2b93cf6fc063@againstthefence.com"
+    "uid": "9ee4a569-6bf9-5eda-8696-8d90e0d4aff7@againstthefence.com"
   },
   {
-    "title": "UFC Fight Night: Muhammad vs. Bonfim",
-    "start_local": "2026-06-06T20:00:00-07:00",
-    "prelims_local": "2026-06-06T17:00:00-07:00",
-    "location": "Meta APEX, Las Vegas, NV",
+    "title": "UFC Fight Night: Nurmagomedov vs. Song",
+    "main_utc": "2026-08-29T10:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "217b597a-85ba-5434-a27e-b7090f98b9fa@againstthefence.com"
+    "uid": "39027c82-0e5d-5fc4-a11f-7d377a39be9a@againstthefence.com"
   },
   {
-    "title": "UFC Freedom 250: Topuria vs. Gaethje",
-    "start_local": "2026-06-14T16:00:00-07:00",
-    "prelims_local": "2026-06-14T20:00:00-07:00",
-    "location": "T-Mobile Arena, Las Vegas, NV",
+    "title": "UFC Fight Night: Paris",
+    "main_utc": "2026-09-05T19:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "4cba56ee-47fe-55f1-a281-552fd73eadb8@againstthefence.com"
+    "uid": "d395fc2b-37dc-5e0f-bb7f-099c3440c2c1@againstthefence.com"
   },
   {
-    "title": "UFC 329",
-    "start_local": "2026-07-11T17:00:00-07:00",
-    "prelims_local": "2026-07-11T16:00:00-07:00",
-    "location": "T-Mobile Arena, Las Vegas, NV",
+    "title": "Noche UFC",
+    "main_utc": "2026-09-13T00:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "f57f82dd-cd69-5cb5-8405-19e727f855af@againstthefence.com"
+    "uid": "017ffa06-11c4-534d-bd42-30a9b7eb2eec@againstthefence.com"
   },
   {
-    "title": "UFC 330",
-    "start_local": "2026-08-15T17:00:00-05:00",
-    "prelims_local": null,
-    "location": "Xfinity Mobile Arena, Philadelphia, PA",
+    "title": "UFC Fight Night: Edmonton",
+    "main_utc": "2026-10-18T00:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "8ced2127-55c8-5bfa-b7d4-b54228ff5ee9@againstthefence.com"
+    "uid": "3789d87b-1391-51ea-a027-d319a1d10889@againstthefence.com"
   }
 ]

@@ -3,95 +3,96 @@ VERSION:2.0
 PRODID:-//Against The Fence//ATF UFC Main Events//EN
 X-WR-CALNAME:UFC Event Schedule
 X-WR-CALDESC:Free UFC event calendar by Against The Fence
-X-WR-TIMEZONE:UTC
+X-PUBLISHED-TTL:PT12H
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
 BEGIN:VEVENT
-UID:fe52abce-6034-5fd8-b47c-911cf49ec985@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/Los_Angeles:20260425T170000
-DTEND;TZID=America/Los_Angeles:20260425T200000
-SUMMARY:UFC Fight Night: Sterling vs. Zalal
-DESCRIPTION:Where to watch\nUFC Fight Night: Sterling vs. Zalal main card streams on Paramount+ at 8:00 PM\, PDT.\nThe prelims stream on Paramount+ at 5:00 PM\, PDT.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Meta APEX\, Las Vegas\, NV
+UID:ab0a9339-ec1f-5a2f-842c-00a4fea00c97@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20260725T160000Z
+DTEND:20260725T190000Z
+SUMMARY:UFC Fight Night: Ankalaev vs. Guskov
+DESCRIPTION:Where to watch\nUFC Fight Night: Ankalaev vs. Guskov main card: 5:00 PM Sat UK time (12:00 PM Sat ET) on Paramount+.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Etihad Arena\, Abu Dhabi\, United Arab Emirates
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:394e6679-0660-5128-bff8-2edd336cbb18@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/Los_Angeles:20260502T170000
-DTEND;TZID=America/Los_Angeles:20260502T200000
-SUMMARY:UFC Fight Night: Della Maddalena vs. Prates
-DESCRIPTION:Where to watch\nUFC Fight Night: Della Maddalena vs. Prates main card streams on Paramount+ at 5:00 PM\, PDT.\nThe prelims stream on Paramount+ at 4:00 AM\, PDT.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:RAC Arena (AUS)\, Perth\, WA\, Australia
+UID:b6194c5b-dc9c-58ec-a950-b8296dc607fe@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20260801T170000Z
+DTEND:20260801T200000Z
+SUMMARY:UFC Fight Night: Medić vs. Rodriguez
+DESCRIPTION:Where to watch\nUFC Fight Night: Medić vs. Rodriguez main card: 6:00 PM Sat UK time (1:00 PM Sat ET) on Paramount+.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:a21ca37d-2c59-544a-bd73-a031eaece866@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/New_York:20260509T170000
-DTEND;TZID=America/New_York:20260509T200000
-SUMMARY:UFC 328: Chimaev vs. Strickland
-DESCRIPTION:Where to watch\nUFC 328: Chimaev vs. Strickland main card streams on Paramount+ at 5:00 PM\, EDT.\nThe prelims stream on Paramount+ at 5:00 PM\, EDT.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Prudential Center\, Newark\, NJ
+UID:c6a94684-7042-5dec-9bc0-34ff1d757af8@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20260808T210000Z
+DTEND:20260809T000000Z
+SUMMARY:UFC Fight Night: Gamrot vs Salkilld
+DESCRIPTION:Where to watch\nUFC Fight Night: Gamrot vs Salkilld main card: 10:00 PM Sat UK time (5:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:48ebf27f-87c5-5e99-a76f-e4ac215d5838@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/Los_Angeles:20260516T040000
-DTEND;TZID=America/Los_Angeles:20260516T070000
-SUMMARY:UFC Fight Night: Allen vs. Costa
-DESCRIPTION:Where to watch\nUFC Fight Night: Allen vs. Costa main card streams on Paramount+ at 4:00 AM\, PDT.\nThe prelims stream on Paramount+ at 5:00 PM\, PDT.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Meta APEX\, Las Vegas\, NV
+UID:493ca2fc-20dc-5b19-b3d9-f5ef8d4c2b88@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20260816T000000Z
+DTEND:20260816T030000Z
+SUMMARY:UFC 330: Makhachev vs. Machado Garry
+DESCRIPTION:Where to watch\nUFC 330: Makhachev vs. Machado Garry main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:9b336b14-6ef1-508e-88b2-2b93cf6fc063@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/Los_Angeles:20260530T170000
-DTEND;TZID=America/Los_Angeles:20260530T200000
-SUMMARY:UFC Fight Night: Song vs. Figueiredo
-DESCRIPTION:Where to watch\nUFC Fight Night: Song vs. Figueiredo main card streams on Paramount+ at 5:00 PM\, PDT.\nThe prelims stream on Paramount+ at 4:00 AM\, PDT.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Galaxy Arena\, Cotai\, Macau
+UID:9ee4a569-6bf9-5eda-8696-8d90e0d4aff7@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20260823T000000Z
+DTEND:20260823T030000Z
+SUMMARY:UFC Fight Night: Hernandez vs. Rodrigues
+DESCRIPTION:Where to watch\nUFC Fight Night: Hernandez vs. Rodrigues main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:217b597a-85ba-5434-a27e-b7090f98b9fa@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/Los_Angeles:20260606T200000
-DTEND;TZID=America/Los_Angeles:20260606T230000
-SUMMARY:UFC Fight Night: Muhammad vs. Bonfim
-DESCRIPTION:Where to watch\nUFC Fight Night: Muhammad vs. Bonfim main card streams on Paramount+ at 8:00 PM\, PDT.\nThe prelims stream on Paramount+ at 5:00 PM\, PDT.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Meta APEX\, Las Vegas\, NV
+UID:39027c82-0e5d-5fc4-a11f-7d377a39be9a@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20260829T100000Z
+DTEND:20260829T130000Z
+SUMMARY:UFC Fight Night: Nurmagomedov vs. Song
+DESCRIPTION:Where to watch\nUFC Fight Night: Nurmagomedov vs. Song main card: 11:00 AM Sat UK time (6:00 AM Sat ET) on Paramount+.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:4cba56ee-47fe-55f1-a281-552fd73eadb8@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/Los_Angeles:20260614T160000
-DTEND;TZID=America/Los_Angeles:20260614T190000
-SUMMARY:UFC Freedom 250: Topuria vs. Gaethje
-DESCRIPTION:Where to watch\nUFC Freedom 250: Topuria vs. Gaethje main card streams on Paramount+ at 4:00 PM\, PDT.\nThe prelims stream on Paramount+ at 8:00 PM\, PDT.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:T-Mobile Arena\, Las Vegas\, NV
+UID:d395fc2b-37dc-5e0f-bb7f-099c3440c2c1@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20260905T190000Z
+DTEND:20260905T220000Z
+SUMMARY:UFC Fight Night: Paris
+DESCRIPTION:Where to watch\nUFC Fight Night: Paris main card: 8:00 PM Sat UK time (3:00 PM Sat ET) on Paramount+.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:f57f82dd-cd69-5cb5-8405-19e727f855af@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/Los_Angeles:20260711T170000
-DTEND;TZID=America/Los_Angeles:20260711T200000
-SUMMARY:UFC 329
-DESCRIPTION:Where to watch\nUFC 329 main card streams on Paramount+ at 5:00 PM\, PDT.\nThe prelims stream on Paramount+ at 4:00 PM\, PDT.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:T-Mobile Arena\, Las Vegas\, NV
+UID:017ffa06-11c4-534d-bd42-30a9b7eb2eec@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20260913T000000Z
+DTEND:20260913T030000Z
+SUMMARY:Noche UFC
+DESCRIPTION:Where to watch\nNoche UFC main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:8ced2127-55c8-5bfa-b7d4-b54228ff5ee9@againstthefence.com
-DTSTAMP:20260420T105433Z
-DTSTART;TZID=America/Chicago:20260815T170000
-DTEND;TZID=America/Chicago:20260815T200000
-SUMMARY:UFC 330
-DESCRIPTION:Where to watch\nUFC 330 main card streams on Paramount+ at 8:00 PM\, CDT.\nThe prelims stream on Paramount+ at 5:00 PM\, CDT.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Xfinity Mobile Arena\, Philadelphia\, PA
+UID:3789d87b-1391-51ea-a027-d319a1d10889@againstthefence.com
+DTSTAMP:20260720T123459Z
+DTSTART:20261018T000000Z
+DTEND:20261018T030000Z
+SUMMARY:UFC Fight Night: Edmonton
+DESCRIPTION:Where to watch\nUFC Fight Night: Edmonton main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 END:VCALENDAR
