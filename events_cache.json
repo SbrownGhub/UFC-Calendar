@@ -1,18 +1,9 @@
 [
   {
-    "title": "UFC Fight Night: Ankalaev vs. Guskov",
-    "main_utc": "2026-07-25T16:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Etihad Arena, Abu Dhabi, United Arab Emirates",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "ab0a9339-ec1f-5a2f-842c-00a4fea00c97@againstthefence.com"
-  },
-  {
     "title": "UFC Fight Night: Medi\u0107 vs. Rodriguez",
     "main_utc": "2026-08-01T17:00:00+00:00",
     "prelims_utc": null,
-    "location": "Location TBA",
+    "location": "Belgrade Arena, Belgrade, Serbia",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
     "uid": "b6194c5b-dc9c-58ec-a950-b8296dc607fe@againstthefence.com"
@@ -54,13 +45,13 @@
     "uid": "39027c82-0e5d-5fc4-a11f-7d377a39be9a@againstthefence.com"
   },
   {
-    "title": "UFC Fight Night: Paris",
+    "title": "UFC Fight Night: Hooker vs. Parnasse",
     "main_utc": "2026-09-05T19:00:00+00:00",
     "prelims_utc": null,
     "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "d395fc2b-37dc-5e0f-bb7f-099c3440c2c1@againstthefence.com"
+    "uid": "2b67086f-ccc4-55b6-ab4f-a3ff418a5ec4@againstthefence.com"
   },
   {
     "title": "Noche UFC",
