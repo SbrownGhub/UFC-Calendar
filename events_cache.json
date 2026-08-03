@@ -1,21 +1,12 @@
 [
   {
-    "title": "UFC Fight Night: Medi\u0107 vs. Rodriguez",
-    "main_utc": "2026-08-01T17:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Belgrade Arena, Belgrade, Serbia",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "b6194c5b-dc9c-58ec-a950-b8296dc607fe@againstthefence.com"
-  },
-  {
     "title": "UFC Fight Night: Gamrot vs Salkilld",
-    "main_utc": "2026-08-08T21:00:00+00:00",
+    "main_utc": "2026-08-09T00:00:00+00:00",
     "prelims_utc": null,
-    "location": "Location TBA",
+    "location": "Meta APEX, Las Vegas, NV, USA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "c6a94684-7042-5dec-9bc0-34ff1d757af8@againstthefence.com"
+    "uid": "675000bf-7aac-5857-a07f-023488bf3259@againstthefence.com"
   },
   {
     "title": "UFC 330: Makhachev vs. Machado Garry",
@@ -55,12 +46,21 @@
   },
   {
     "title": "Noche UFC",
-    "main_utc": "2026-09-13T00:00:00+00:00",
+    "main_utc": "2026-09-12T21:00:00+00:00",
     "prelims_utc": null,
     "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "017ffa06-11c4-534d-bd42-30a9b7eb2eec@againstthefence.com"
+    "uid": "1df46621-3015-5323-97ea-3bce08441f9c@againstthefence.com"
+  },
+  {
+    "title": "UFC 331",
+    "main_utc": "2026-09-20T00:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "ce48caea-d311-5ef2-9e58-0ccf707a4f25@againstthefence.com"
   },
   {
     "title": "UFC Fight Night: Buckley vs. Malott",

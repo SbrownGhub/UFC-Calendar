@@ -6,28 +6,18 @@ X-WR-CALDESC:Free UFC event calendar by Against The Fence
 X-PUBLISHED-TTL:PT12H
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 BEGIN:VEVENT
-UID:b6194c5b-dc9c-58ec-a950-b8296dc607fe@againstthefence.com
-DTSTAMP:20260730T110839Z
-DTSTART:20260801T170000Z
-DTEND:20260801T200000Z
-SUMMARY:UFC Fight Night: Medić vs. Rodriguez
-DESCRIPTION:Where to watch\nUFC Fight Night: Medić vs. Rodriguez main card: 6:00 PM Sat UK time (1:00 PM Sat ET) on Paramount+.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Belgrade Arena\, Belgrade\, Serbia
-URL:https://www.youtube.com/c/AgainstTheFence
-END:VEVENT
-BEGIN:VEVENT
-UID:c6a94684-7042-5dec-9bc0-34ff1d757af8@againstthefence.com
-DTSTAMP:20260730T110839Z
-DTSTART:20260808T210000Z
-DTEND:20260809T000000Z
+UID:675000bf-7aac-5857-a07f-023488bf3259@againstthefence.com
+DTSTAMP:20260803T122427Z
+DTSTART:20260809T000000Z
+DTEND:20260809T030000Z
 SUMMARY:UFC Fight Night: Gamrot vs Salkilld
-DESCRIPTION:Where to watch\nUFC Fight Night: Gamrot vs Salkilld main card: 10:00 PM Sat UK time (5:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Location TBA
+DESCRIPTION:Where to watch\nUFC Fight Night: Gamrot vs Salkilld main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Meta APEX\, Las Vegas\, NV\, USA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:493ca2fc-20dc-5b19-b3d9-f5ef8d4c2b88@againstthefence.com
-DTSTAMP:20260730T110839Z
+DTSTAMP:20260803T122427Z
 DTSTART:20260816T000000Z
 DTEND:20260816T030000Z
 SUMMARY:UFC 330: Makhachev vs. Machado Garry
@@ -37,7 +27,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:9ee4a569-6bf9-5eda-8696-8d90e0d4aff7@againstthefence.com
-DTSTAMP:20260730T110839Z
+DTSTAMP:20260803T122427Z
 DTSTART:20260823T000000Z
 DTEND:20260823T030000Z
 SUMMARY:UFC Fight Night: Hernandez vs. Rodrigues
@@ -47,7 +37,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:39027c82-0e5d-5fc4-a11f-7d377a39be9a@againstthefence.com
-DTSTAMP:20260730T110839Z
+DTSTAMP:20260803T122427Z
 DTSTART:20260829T100000Z
 DTEND:20260829T130000Z
 SUMMARY:UFC Fight Night: Nurmagomedov vs. Song
@@ -57,7 +47,7 @@ URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:2b67086f-ccc4-55b6-ab4f-a3ff418a5ec4@againstthefence.com
-DTSTAMP:20260730T110839Z
+DTSTAMP:20260803T122427Z
 DTSTART:20260905T190000Z
 DTEND:20260905T220000Z
 SUMMARY:UFC Fight Night: Hooker vs. Parnasse
@@ -66,18 +56,28 @@ LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:017ffa06-11c4-534d-bd42-30a9b7eb2eec@againstthefence.com
-DTSTAMP:20260730T110839Z
-DTSTART:20260913T000000Z
-DTEND:20260913T030000Z
+UID:1df46621-3015-5323-97ea-3bce08441f9c@againstthefence.com
+DTSTAMP:20260803T122427Z
+DTSTART:20260912T210000Z
+DTEND:20260913T000000Z
 SUMMARY:Noche UFC
-DESCRIPTION:Where to watch\nNoche UFC main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
+DESCRIPTION:Where to watch\nNoche UFC main card: 10:00 PM Sat UK time (5:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
+URL:https://www.youtube.com/c/AgainstTheFence
+END:VEVENT
+BEGIN:VEVENT
+UID:ce48caea-d311-5ef2-9e58-0ccf707a4f25@againstthefence.com
+DTSTAMP:20260803T122427Z
+DTSTART:20260920T000000Z
+DTEND:20260920T030000Z
+SUMMARY:UFC 331
+DESCRIPTION:Where to watch\nUFC 331 main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
 LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:f23881ab-42a3-51aa-a180-c3199c973857@againstthefence.com
-DTSTAMP:20260730T110839Z
+DTSTAMP:20260803T122427Z
 DTSTART:20261018T000000Z
 DTEND:20261018T030000Z
 SUMMARY:UFC Fight Night: Buckley vs. Malott
