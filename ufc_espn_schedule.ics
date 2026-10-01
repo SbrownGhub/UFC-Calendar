@@ -6,82 +6,92 @@ X-WR-CALDESC:Free UFC event calendar by Against The Fence
 X-PUBLISHED-TTL:PT12H
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 BEGIN:VEVENT
-UID:675000bf-7aac-5857-a07f-023488bf3259@againstthefence.com
-DTSTAMP:20260803T122427Z
-DTSTART:20260809T000000Z
-DTEND:20260809T030000Z
-SUMMARY:UFC Fight Night: Gamrot vs Salkilld
-DESCRIPTION:Where to watch\nUFC Fight Night: Gamrot vs Salkilld main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Meta APEX\, Las Vegas\, NV\, USA
+UID:60ee19f1-e7a5-5ba2-8f77-7b017f2dd867@againstthefence.com
+DTSTAMP:20261001T160249Z
+DTSTART:20261003T230000Z
+DTEND:20261004T020000Z
+SUMMARY:UFC 332: Silva vs. Wang
+DESCRIPTION:Where to watch\nUFC 332: Silva vs. Wang main card: 12:00 AM Sun UK time (7:00 PM Sat ET) on Paramount+.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Delta Center\, Salt Lake City\, UT\, USA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
-UID:493ca2fc-20dc-5b19-b3d9-f5ef8d4c2b88@againstthefence.com
-DTSTAMP:20260803T122427Z
-DTSTART:20260816T000000Z
-DTEND:20260816T030000Z
-SUMMARY:UFC 330: Makhachev vs. Machado Garry
-DESCRIPTION:Where to watch\nUFC 330: Makhachev vs. Machado Garry main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Location TBA
-URL:https://www.youtube.com/c/AgainstTheFence
-END:VEVENT
-BEGIN:VEVENT
-UID:9ee4a569-6bf9-5eda-8696-8d90e0d4aff7@againstthefence.com
-DTSTAMP:20260803T122427Z
-DTSTART:20260823T000000Z
-DTEND:20260823T030000Z
-SUMMARY:UFC Fight Night: Hernandez vs. Rodrigues
-DESCRIPTION:Where to watch\nUFC Fight Night: Hernandez vs. Rodrigues main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Location TBA
-URL:https://www.youtube.com/c/AgainstTheFence
-END:VEVENT
-BEGIN:VEVENT
-UID:39027c82-0e5d-5fc4-a11f-7d377a39be9a@againstthefence.com
-DTSTAMP:20260803T122427Z
-DTSTART:20260829T100000Z
-DTEND:20260829T130000Z
-SUMMARY:UFC Fight Night: Nurmagomedov vs. Song
-DESCRIPTION:Where to watch\nUFC Fight Night: Nurmagomedov vs. Song main card: 11:00 AM Sat UK time (6:00 AM Sat ET) on Paramount+.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Location TBA
-URL:https://www.youtube.com/c/AgainstTheFence
-END:VEVENT
-BEGIN:VEVENT
-UID:2b67086f-ccc4-55b6-ab4f-a3ff418a5ec4@againstthefence.com
-DTSTAMP:20260803T122427Z
-DTSTART:20260905T190000Z
-DTEND:20260905T220000Z
-SUMMARY:UFC Fight Night: Hooker vs. Parnasse
-DESCRIPTION:Where to watch\nUFC Fight Night: Hooker vs. Parnasse main card: 8:00 PM Sat UK time (3:00 PM Sat ET) on Paramount+.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Location TBA
-URL:https://www.youtube.com/c/AgainstTheFence
-END:VEVENT
-BEGIN:VEVENT
-UID:1df46621-3015-5323-97ea-3bce08441f9c@againstthefence.com
-DTSTAMP:20260803T122427Z
-DTSTART:20260912T210000Z
-DTEND:20260913T000000Z
-SUMMARY:Noche UFC
-DESCRIPTION:Where to watch\nNoche UFC main card: 10:00 PM Sat UK time (5:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Location TBA
-URL:https://www.youtube.com/c/AgainstTheFence
-END:VEVENT
-BEGIN:VEVENT
-UID:ce48caea-d311-5ef2-9e58-0ccf707a4f25@againstthefence.com
-DTSTAMP:20260803T122427Z
-DTSTART:20260920T000000Z
-DTEND:20260920T030000Z
-SUMMARY:UFC 331
-DESCRIPTION:Where to watch\nUFC 331 main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+UID:17d575a4-fd41-5485-afe1-5e160b1a1b26@againstthefence.com
+DTSTAMP:20261001T160249Z
+DTSTART:20261011T000000Z
+DTEND:20261011T030000Z
+SUMMARY:UFC Fight Night: Allen vs. Duncan
+DESCRIPTION:Where to watch\nUFC Fight Night: Allen vs. Duncan main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence (click the link)\n
 LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:f23881ab-42a3-51aa-a180-c3199c973857@againstthefence.com
-DTSTAMP:20260803T122427Z
+DTSTAMP:20261001T160249Z
 DTSTART:20261018T000000Z
 DTEND:20261018T030000Z
 SUMMARY:UFC Fight Night: Buckley vs. Malott
 DESCRIPTION:Where to watch\nUFC Fight Night: Buckley vs. Malott main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
+URL:https://www.youtube.com/c/AgainstTheFence
+END:VEVENT
+BEGIN:VEVENT
+UID:9e18da68-c038-5ec7-8579-7fa534a28795@againstthefence.com
+DTSTAMP:20261001T160249Z
+DTSTART:20261024T170000Z
+DTEND:20261024T200000Z
+SUMMARY:UFC 333: Volkanovski vs. Evloev
+DESCRIPTION:Where to watch\nUFC 333: Volkanovski vs. Evloev main card: 6:00 PM Sat UK time (1:00 PM Sat ET) on Paramount+.\n\nWe do not do polite\, sterile analysis. We do fan energy\, sharp takes\, and proper watch-alongs - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
+URL:https://www.youtube.com/c/AgainstTheFence
+END:VEVENT
+BEGIN:VEVENT
+UID:e33cd7f7-4b58-5b27-b30b-6e945a979170@againstthefence.com
+DTSTAMP:20261001T160249Z
+DTSTART:20261101T000000Z
+DTEND:20261101T030000Z
+SUMMARY:UFC Fight Night: Moicano vs. Nolan
+DESCRIPTION:Where to watch\nUFC Fight Night: Moicano vs. Nolan main card: 12:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
+URL:https://www.youtube.com/c/AgainstTheFence
+END:VEVENT
+BEGIN:VEVENT
+UID:a14e507e-a280-530f-8b6d-9dcad33b19e3@againstthefence.com
+DTSTAMP:20261001T160249Z
+DTSTART:20261108T010000Z
+DTEND:20261108T040000Z
+SUMMARY:UFC Fight Night: Bonfim vs. Brady
+DESCRIPTION:Where to watch\nUFC Fight Night: Bonfim vs. Brady main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
+URL:https://www.youtube.com/c/AgainstTheFence
+END:VEVENT
+BEGIN:VEVENT
+UID:0019575b-ed8e-57d9-8b15-2a4454a2ca57@againstthefence.com
+DTSTAMP:20261001T160249Z
+DTSTART:20261115T010000Z
+DTEND:20261115T040000Z
+SUMMARY:UFC 334: Gane vs. Hokit
+DESCRIPTION:Where to watch\nUFC 334: Gane vs. Hokit main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
+URL:https://www.youtube.com/c/AgainstTheFence
+END:VEVENT
+BEGIN:VEVENT
+UID:c1900858-472e-5bbc-8dfd-5d50b4d2ea7e@againstthefence.com
+DTSTAMP:20261001T160249Z
+DTSTART:20261121T170000Z
+DTEND:20261121T200000Z
+SUMMARY:UFC Fight Night: Procházka vs. Stirling
+DESCRIPTION:Where to watch\nUFC Fight Night: Procházka vs. Stirling main card: 5:00 PM Sat UK time (12:00 PM Sat ET) on Paramount+.\n\nWatch the event\, and head to ATF for the fan verdict they won't give you on broadcast\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
+URL:https://www.youtube.com/c/AgainstTheFence
+END:VEVENT
+BEGIN:VEVENT
+UID:aa426030-97ee-5072-b2e7-e88821bb329a@againstthefence.com
+DTSTAMP:20261001T160249Z
+DTSTART:20261213T010000Z
+DTEND:20261213T040000Z
+SUMMARY:UFC 335
+DESCRIPTION:Where to watch\nUFC 335 main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
 LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT

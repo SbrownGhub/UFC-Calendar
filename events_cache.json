@@ -1,66 +1,21 @@
 [
   {
-    "title": "UFC Fight Night: Gamrot vs Salkilld",
-    "main_utc": "2026-08-09T00:00:00+00:00",
+    "title": "UFC 332: Silva vs. Wang",
+    "main_utc": "2026-10-03T23:00:00+00:00",
     "prelims_utc": null,
-    "location": "Meta APEX, Las Vegas, NV, USA",
+    "location": "Delta Center, Salt Lake City, UT, USA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "675000bf-7aac-5857-a07f-023488bf3259@againstthefence.com"
+    "uid": "60ee19f1-e7a5-5ba2-8f77-7b017f2dd867@againstthefence.com"
   },
   {
-    "title": "UFC 330: Makhachev vs. Machado Garry",
-    "main_utc": "2026-08-16T00:00:00+00:00",
+    "title": "UFC Fight Night: Allen vs. Duncan",
+    "main_utc": "2026-10-11T00:00:00+00:00",
     "prelims_utc": null,
     "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "493ca2fc-20dc-5b19-b3d9-f5ef8d4c2b88@againstthefence.com"
-  },
-  {
-    "title": "UFC Fight Night: Hernandez vs. Rodrigues",
-    "main_utc": "2026-08-23T00:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Location TBA",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "9ee4a569-6bf9-5eda-8696-8d90e0d4aff7@againstthefence.com"
-  },
-  {
-    "title": "UFC Fight Night: Nurmagomedov vs. Song",
-    "main_utc": "2026-08-29T10:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Location TBA",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "39027c82-0e5d-5fc4-a11f-7d377a39be9a@againstthefence.com"
-  },
-  {
-    "title": "UFC Fight Night: Hooker vs. Parnasse",
-    "main_utc": "2026-09-05T19:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Location TBA",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "2b67086f-ccc4-55b6-ab4f-a3ff418a5ec4@againstthefence.com"
-  },
-  {
-    "title": "Noche UFC",
-    "main_utc": "2026-09-12T21:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Location TBA",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "1df46621-3015-5323-97ea-3bce08441f9c@againstthefence.com"
-  },
-  {
-    "title": "UFC 331",
-    "main_utc": "2026-09-20T00:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Location TBA",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "ce48caea-d311-5ef2-9e58-0ccf707a4f25@againstthefence.com"
+    "uid": "17d575a4-fd41-5485-afe1-5e160b1a1b26@againstthefence.com"
   },
   {
     "title": "UFC Fight Night: Buckley vs. Malott",
@@ -70,5 +25,59 @@
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
     "uid": "f23881ab-42a3-51aa-a180-c3199c973857@againstthefence.com"
+  },
+  {
+    "title": "UFC 333: Volkanovski vs. Evloev",
+    "main_utc": "2026-10-24T17:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "9e18da68-c038-5ec7-8579-7fa534a28795@againstthefence.com"
+  },
+  {
+    "title": "UFC Fight Night: Moicano vs. Nolan",
+    "main_utc": "2026-11-01T00:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "e33cd7f7-4b58-5b27-b30b-6e945a979170@againstthefence.com"
+  },
+  {
+    "title": "UFC Fight Night: Bonfim vs. Brady",
+    "main_utc": "2026-11-08T01:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "a14e507e-a280-530f-8b6d-9dcad33b19e3@againstthefence.com"
+  },
+  {
+    "title": "UFC 334: Gane vs. Hokit",
+    "main_utc": "2026-11-15T01:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "0019575b-ed8e-57d9-8b15-2a4454a2ca57@againstthefence.com"
+  },
+  {
+    "title": "UFC Fight Night: Proch\u00e1zka vs. Stirling",
+    "main_utc": "2026-11-21T17:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "c1900858-472e-5bbc-8dfd-5d50b4d2ea7e@againstthefence.com"
+  },
+  {
+    "title": "UFC 335",
+    "main_utc": "2026-12-13T01:00:00+00:00",
+    "prelims_utc": null,
+    "location": "Location TBA",
+    "broadcaster": "Paramount+",
+    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
+    "uid": "aa426030-97ee-5072-b2e7-e88821bb329a@againstthefence.com"
   }
 ]
