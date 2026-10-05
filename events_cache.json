@@ -1,14 +1,5 @@
 [
   {
-    "title": "UFC 332: Silva vs. Wang",
-    "main_utc": "2026-10-03T23:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Delta Center, Salt Lake City, UT, USA",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "60ee19f1-e7a5-5ba2-8f77-7b017f2dd867@againstthefence.com"
-  },
-  {
     "title": "UFC Fight Night: Allen vs. Duncan",
     "main_utc": "2026-10-11T00:00:00+00:00",
     "prelims_utc": null,
@@ -72,12 +63,12 @@
     "uid": "c1900858-472e-5bbc-8dfd-5d50b4d2ea7e@againstthefence.com"
   },
   {
-    "title": "UFC 335",
+    "title": "UFC 335: Oliveira vs. Lopes",
     "main_utc": "2026-12-13T01:00:00+00:00",
     "prelims_utc": null,
     "location": "Location TBA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "aa426030-97ee-5072-b2e7-e88821bb329a@againstthefence.com"
+    "uid": "71ceb7ae-c183-5ca5-be66-33a9055313f9@againstthefence.com"
   }
 ]
