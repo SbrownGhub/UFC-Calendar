@@ -1,18 +1,9 @@
 [
   {
-    "title": "UFC Fight Night: Buckley vs. Malott",
-    "main_utc": "2026-10-18T00:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Rogers Place, Edmonton, AB, Canada",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "f23881ab-42a3-51aa-a180-c3199c973857@againstthefence.com"
-  },
-  {
     "title": "UFC 333: Volkanovski vs. Evloev",
     "main_utc": "2026-10-24T17:00:00+00:00",
     "prelims_utc": null,
-    "location": "Location TBA",
+    "location": "Etihad Arena, Abu Dhabi, United Arab Emirates",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
     "uid": "9e18da68-c038-5ec7-8579-7fa534a28795@againstthefence.com"
