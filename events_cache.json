@@ -1,21 +1,12 @@
 [
   {
-    "title": "UFC Fight Night: Moicano vs. Nolan",
-    "main_utc": "2026-11-01T00:00:00+00:00",
+    "title": "UFC Fight Night: Cortes Acosta vs. Walker",
+    "main_utc": "2026-11-08T01:00:00+00:00",
     "prelims_utc": null,
     "location": "Meta APEX, Las Vegas, NV, USA",
     "broadcaster": "Paramount+",
     "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "e33cd7f7-4b58-5b27-b30b-6e945a979170@againstthefence.com"
-  },
-  {
-    "title": "UFC Fight Night: Bonfim vs. Brady",
-    "main_utc": "2026-11-08T01:00:00+00:00",
-    "prelims_utc": null,
-    "location": "Location TBA",
-    "broadcaster": "Paramount+",
-    "source_url": "https://www.espn.com/mma/schedule/_/league/ufc",
-    "uid": "a14e507e-a280-530f-8b6d-9dcad33b19e3@againstthefence.com"
+    "uid": "ac504506-d830-5e7d-a6d0-1c39617b5e5f@againstthefence.com"
   },
   {
     "title": "UFC 334: Gane vs. Hokit",
