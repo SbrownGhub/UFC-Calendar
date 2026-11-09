@@ -6,28 +6,18 @@ X-WR-CALDESC:Free UFC event calendar by Against The Fence
 X-PUBLISHED-TTL:PT12H
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 BEGIN:VEVENT
-UID:ac504506-d830-5e7d-a6d0-1c39617b5e5f@againstthefence.com
-DTSTAMP:20261105T170849Z
-DTSTART:20261108T010000Z
-DTEND:20261108T040000Z
-SUMMARY:UFC Fight Night: Cortes Acosta vs. Walker
-DESCRIPTION:Where to watch\nUFC Fight Night: Cortes Acosta vs. Walker main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nSkip the corporate waffle. Watch the fights\, come argue with us live - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Meta APEX\, Las Vegas\, NV\, USA
-URL:https://www.youtube.com/c/AgainstTheFence
-END:VEVENT
-BEGIN:VEVENT
 UID:0019575b-ed8e-57d9-8b15-2a4454a2ca57@againstthefence.com
-DTSTAMP:20261105T170849Z
+DTSTAMP:20261109T193302Z
 DTSTART:20261115T010000Z
 DTEND:20261115T040000Z
 SUMMARY:UFC 334: Gane vs. Hokit
 DESCRIPTION:Where to watch\nUFC 334: Gane vs. Hokit main card: 1:00 AM Sun UK time (8:00 PM Sat ET) on Paramount+.\n\nThe card starts in the cage\, but the real chaos starts in the comments - ATF\n\nWatch along for free on Against The Fence (click the link)\n
-LOCATION:Location TBA
+LOCATION:Madison Square Garden\, New York\, NY\, USA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
 UID:c1900858-472e-5bbc-8dfd-5d50b4d2ea7e@againstthefence.com
-DTSTAMP:20261105T170849Z
+DTSTAMP:20261109T193302Z
 DTSTART:20261121T180000Z
 DTEND:20261121T210000Z
 SUMMARY:UFC Fight Night: Procházka vs. Stirling
@@ -36,8 +26,18 @@ LOCATION:Location TBA
 URL:https://www.youtube.com/c/AgainstTheFence
 END:VEVENT
 BEGIN:VEVENT
+UID:edb45044-c7ce-5859-ab70-64c96c35a71b@againstthefence.com
+DTSTAMP:20261109T193302Z
+DTSTART:20261205T180000Z
+DTEND:20261205T210000Z
+SUMMARY:UFC Fight Night: Adesanya vs Magomedov
+DESCRIPTION:Where to watch\nUFC Fight Night: Adesanya vs Magomedov main card: 6:00 PM Sat UK time (1:00 PM Sat ET) on Paramount+.\n\nIf the judges ruin your night\, we will be there to say it plainly - ATF\n\nWatch along for free on Against The Fence (click the link)\n
+LOCATION:Location TBA
+URL:https://www.youtube.com/c/AgainstTheFence
+END:VEVENT
+BEGIN:VEVENT
 UID:71ceb7ae-c183-5ca5-be66-33a9055313f9@againstthefence.com
-DTSTAMP:20261105T170849Z
+DTSTAMP:20261109T193302Z
 DTSTART:20261213T010000Z
 DTEND:20261213T040000Z
 SUMMARY:UFC 335: Oliveira vs. Lopes
